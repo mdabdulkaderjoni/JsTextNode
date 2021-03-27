@@ -1,0 +1,307 @@
+What is Token?
+
+			what is variable?
+
+JavaScript variables are containers for storing data values.
+
+	what is Identifiers?
+
+All JavaScript variables must be identified with unique names.
+
+The general rules for constructing names for variables (unique identifiers) 
+
+JavaScript identifiers are case-sensitive.
+
+	differences between Storngly-typed variables vs loosely-typed variables?
+
+	differences between global variables and local variables? //will be discussed in function chapter
+
+Interview Q: 
+1. is javascript strongly-typed or loosel-typed?
+2. differences between global variables and local variables?
+
+			JavaScript Operators
+
+JavaScript operators are symbols that are used to perform operations on operands. For example:
+
+var sum=10+20;  
+
+
+There are following types of operators in JavaScript.
+
+
+Arithmetic Operators
+
++	Addition	10+20 = 30
+-	Subtraction	20-10 = 10
+*	Multiplication	10*20 = 200
+/	Division	20/10 = 2
+%	Modulus (Remainder)	20%10 = 0
+
+
+Increment/Decrement Operators
+
+++	Increment	var a=10; a++; Now a = 11
+--	Decrement	var a=10; a--; Now a = 9
+
+pre increment/decrement and post increment/decrement
+
+pre - means first increment/decrement then assign it to another variable
+post - means first assign it to another variable then increment/decrement
+
+
+
+rvalue cannot be used before or after increment/decrement operator
+
+eorror: ++(a+b) or (a+b)++
+
+lvalue and rvalue
+
+lvalue - must be a variable.  var a = x+y here a is lvalue
+
+rvalue - anything which is capable of returning a constant expression or value. var a = x+y here (x+y)  is rvalue
+
+
+error: var a=10; a ++ a // because unary can't be performed on 2 operands
+
+var a=3, b=4, c;
+c=a+++b;
+console.log(c,a);
+
+c=a+ ++b;
+console.log(c,b);
+
+lexical analysis
+phrase of compiler
+
+Interview Q:
+1. when to use pre/post increment/decrement operators
+2. what is lvalue and rvalue?
+3. differences between unay and binay?
+4. what do arithmetic operators do and what are they?
+5. is ! binary or unary?
+
+Comparison (Relational) Operators
+
+==	Is equal to	10==20 = false
+!=	Not equal to	10!=20 = true
+>	Greater than	20>10 = true
+>=	Greater than or equal to	20>=10 = true
+<	Less than	20<10 = false
+<=	Less than or equal to	20<=10 = false
+
+Javascript:
+
+===	Identical (equal and of same type)	10==20 = false
+!==	Not Identical	20!==20 = false
+
+Interview Q:
+
+1. difference between == and === equal operator in javascript
+
+
+Bitwise Operators
+
+&	Bitwise AND	(10==20 & 20==33) = false
+|	Bitwise OR (inclusive)	(10==20 | 20==33) = false
+^	Bitwise XOR (exclusive)	(10==20 ^ 20==33) = false
+~	Bitwise NOT	(~10) = -10
+<<	Bitwise Left Shift	(10<<2) = 40
+>>	Bitwise Right Shift	(10>>2) = 2
+
+AND &
+0 & 0 = 0
+0 & 1 = 0
+1 & 1 = 1
+
+OR |
+0 | 0 = 0
+0 | 1 = 1
+1 | 1 = 1
+
+XOR ^
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 1 = 0
+
+Javascript:
+
+>>>	Bitwise Right Shift with Zero	(10>>>2) = 2
+
+
+Logical Operators
+
+&&	Logical AND	(10==20 && 20==33) = false
+||	Logical OR	(10==20 || 20==33) = false
+!	Logical Not	!(10==20) = true
+
+Javascript:
+
+?? Nullish coalescing operator
+?. Optional chaining
+
+Interview Q:
+
+1. which operator checks if the value is null?
+2. which opearator is called the optional chaning operator?
+
+Assignment Operators
+
+=	Assign	10+10 = 20
++=	Add and assign	var a=10; a+=20; Now a = 30
+-=	Subtract and assign	var a=20; a-=10; Now a = 10
+*=	Multiply and assign	var a=10; a*=20; Now a = 200
+/=	Divide and assign	var a=10; a/=2; Now a = 5
+%=	Modulus and assign	var a=10; a%=2; Now a = 0
+<<=
+>>=
+&=
+|=
+^=
+
+Javascript:
+
+>>>=
+**= Exponentiation assignment 
+??= Logical nullish assignment 
+
+
+Special Operators
+
+(?:)	Conditional Operator returns value based on the condition. It is like if-else.
+,	Comma Operator allows multiple expressions to be evaluated as single statement.
+instanceof	checks if the object is an instance of given type
+new	creates an instance (object)
+typeof	checks the type of object.
+void	it discards the expression's return value.
+
+Interview Q:
+1. what is the meaning of void?
+2. use and live example of instanceof operator
+
+Javascript:
+
+delete	Delete Operator deletes a property from the object.
+in	In Operator checks if object has the given property
+yield	checks what is returned in a generator by the generator's iterator.
+
+
+binary operators and unary operators?
+
+operator precedence
+
+* / % same 
+
++ - is left to right
+
+Interview Q:
+1. describe operators precedences?
+
+
+Escape Sequences
+
+Single character escape sequences
+There are some reserved single character escape sequences for use in strings:
+
+\b: backspace (U+0008 BACKSPACE)
+\f: form feed (U+000C FORM FEED)
+\n: line feed (U+000A LINE FEED)
+\r: carriage return (U+000D CARRIAGE RETURN)
+\t: horizontal tab (U+0009 CHARACTER TABULATION)
+\v: vertical tab (U+000B LINE TABULATION)
+\0: null character (U+0000 NULL) (only if the next character is not a decimal digit; else it’s an octal escape sequence)
+\': single quote (U+0027 APOSTROPHE)
+\": double quote (U+0022 QUOTATION MARK)
+\\: backslash (U+005C REVERSE SOLIDUS)
+
+Coding Exercises
+
+Javascript program to perform all arithmetic operations
+Javascript program to find sum and average of two numbers
+Javascript program to find area and perimeter of circle	//area=PI*rad*rad, perm=2*PI*rad;
+Javascript program to convert temperature from  Celsius to Fahrenheit  //fahrenheit = (celsius * 9 / 5) + 32;  //celsius to fahrenheit 
+Javascript program to find cube of an integer number using pow() function and Exponentiation (**)
+Javascript prgram to swap two numbers without using a temporary variable and using a temp variable
+Javascript program to find square root of any number using sqrt function
+Javascript program to find sum of all numbers from 0 to N without using loop //sum = n*(n+1)/2
+Javascript program to printing value in Decimal, Octal, Hexadecimal, binary // toString()
+Javascript program to print ASCII value of a character // charCodeAt(0)
+Javascript program to generate random numbers between 100 to 1000
+Javascript program to demonstrate example of escape sequences
+
+console.log("Hello\nWorld!");    //use of \n
+console.log("\nHello\tWorld!");  // use of \t
+console.log("\n\"Hello World!\"");   //use of \"
+console.log("\nHello\bWorld!");   //use of \b
+
+
+Explore Math functions
+Explore mathjs.org
+		
+			Data Types
+
+	primitives vs non-primitives
+
+Primitive Data Types
+
+String
+Number
+Boolean
+null
+undefined
+Symbols (ES6)
+
+Non-primitive Data Type
+
+Object
+Date
+Array
+
+https://www.programiz.com/javascript/data-types
+
+null and undefined in JavaScript
+
+type conversion
+
+NaN
+
+Weird behaviors of javascript
+
+
+
+search these below topics in google
+
+variables in javascript
+identifiers in javascript
+differences between let and const
+differences between Storngly-typed variables vs loosely-typed variables?
+differences between global variables and local variables?
+
+operators in javascript
+operator vs operands
+pre increment vs pre decrement
+post increment vs post decrement
+binary operator vs unary operator
+operator precedence
+Exponentiation (**)
+Nullish coalescing operator (??)
+
+data types in javascript
+differences betweeen primitive and non-primitive (object type) data types
+null and undefined in JavaScript
+type conversion in javascript
+NaN in javascript
+Weird behaviors of javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
