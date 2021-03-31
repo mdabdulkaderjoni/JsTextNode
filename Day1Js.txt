@@ -1,4 +1,4 @@
-What is Token?
+                        What is Token?
 
 			what is variable?
 
@@ -19,6 +19,9 @@ JavaScript identifiers are case-sensitive.
 Interview Q: 
 1. is javascript strongly-typed or loosel-typed?
 2. differences between global variables and local variables?
+3. what is the difference between var, let and const keywords?
+4. what are Template Literals?
+
 
 			JavaScript Operators
 
@@ -53,7 +56,8 @@ post - means first assign it to another variable then increment/decrement
 
 rvalue cannot be used before or after increment/decrement operator
 
-eorror: ++(a+b) or (a+b)++
+eorror:x = ++(a+b) or x = (a+b)++
+but this is correct: x=++x or x=x++;
 
 lvalue and rvalue
 
@@ -74,12 +78,15 @@ console.log(c,b);
 lexical analysis
 phrase of compiler
 
+x=-(a-b)
+
 Interview Q:
 1. when to use pre/post increment/decrement operators
 2. what is lvalue and rvalue?
-3. differences between unay and binay?
+3. differences between unary and binay?
 4. what do arithmetic operators do and what are they?
 5. is ! binary or unary?
+6. is using the + or unary plus operator the fastest way in converting a string to a number?
 
 Comparison (Relational) Operators
 
@@ -124,6 +131,17 @@ XOR ^
 0 ^ 1 = 1
 1 ^ 1 = 0
 
+Left Shift <<
+3 << 1 = 6  which is 3 * (2 to the power 1)
+3 << 2 = 12 which is 3 * (2 to the power 2)
+3 << 3 = 24 which is 3 * (2 to the power 3)
+
+Right Shift >>
+24 >> 1 = 12 which is 3 / (2 to the power 1)
+24 >> 2 = 6  which is 3 / (2 to the power 2)
+24 >> 3 = 3  which is 3 / (2 to the power 3)
+
+
 Javascript:
 
 >>>	Bitwise Right Shift with Zero	(10>>>2) = 2
@@ -135,15 +153,19 @@ Logical Operators
 ||	Logical OR	(10==20 || 20==33) = false
 !	Logical Not	!(10==20) = true
 
+
+
 Javascript:
 
 ?? Nullish coalescing operator
 ?. Optional chaining
 
 Interview Q:
-
-1. which operator checks if the value is null?
-2. which opearator is called the optional chaning operator?
+1. What does the && operator do?
+2. what does the || operator do?
+3. what does the !! operator do?
+4. which operator checks if the value is null?
+5. which opearator is called the optional chaning operator?
 
 Assignment Operators
 
@@ -237,6 +259,7 @@ console.log("\nHello\bWorld!");   //use of \b
 
 Explore Math functions
 Explore mathjs.org
+https://www.includehelp.com/c-programs/c-programs-bitwise-programs-and-solutions.aspx (we will cover this exercises after finishing conditional statements and loops)
 		
 			Data Types
 
@@ -267,6 +290,16 @@ NaN
 
 Weird behaviors of javascript
 
+Interview Q:
+1. what are the falsy values in javascript?
+2. how to check if a value is falsy?
+3. what does 'use strict' do?
+4. what is NaN and how to check if a value is NaN?
+5. how to check if a number is even without using the % or modulo operator?
+6. what is memorization and what is the use of it? (higher order functions related Q)
+7. why does typeof null return object? how to check if a value if null?
+
+
 
 
 search these below topics in google
@@ -292,16 +325,6 @@ null and undefined in JavaScript
 type conversion in javascript
 NaN in javascript
 Weird behaviors of javascript
-
-
-
-
-
-
-
-
-
-
 
 
 
