@@ -228,13 +228,15 @@ There are some reserved single character escape sequences for use in strings:
 \b: backspace (U+0008 BACKSPACE)
 \f: form feed (U+000C FORM FEED)
 \n: line feed (U+000A LINE FEED)
-\r: carriage return (U+000D CARRIAGE RETURN)
+\r: carriage return (U+000D CARRIAGE RETURN) //In most cases, browsers ignore carriage returns or render them like spaces
 \t: horizontal tab (U+0009 CHARACTER TABULATION)
 \v: vertical tab (U+000B LINE TABULATION)
 \0: null character (U+0000 NULL) (only if the next character is not a decimal digit; else it’s an octal escape sequence)
 \': single quote (U+0027 APOSTROPHE)
 \": double quote (U+0022 QUOTATION MARK)
 \\: backslash (U+005C REVERSE SOLIDUS)
+
+more details: https://www.youtube.com/watch?v=fpRZsVrVrkU
 
 Coding Exercises
 
@@ -248,7 +250,7 @@ Javascript program to find square root of any number using sqrt function
 Javascript program to find sum of all numbers from 0 to N without using loop //sum = n*(n+1)/2
 Javascript program to printing value in Decimal, Octal, Hexadecimal, binary // toString()
 Javascript program to print ASCII value of a character // charCodeAt(0)
-Javascript program to generate random numbers between 100 to 1000
+Javascript program to generate random numbers between 100 to 1000 //random() * (max - min + 1)) + min
 Javascript program to demonstrate example of escape sequences
 
 console.log("Hello\nWorld!");    //use of \n
@@ -325,6 +327,4 @@ null and undefined in JavaScript
 type conversion in javascript
 NaN in javascript
 Weird behaviors of javascript
-
-
 
