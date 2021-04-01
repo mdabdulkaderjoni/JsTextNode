@@ -75,10 +75,13 @@ console.log(c,a);
 c=a+ ++b;
 console.log(c,b);
 
+var x=12;
+x=++x //correct
+
 lexical analysis
 phrase of compiler
 
-x=-(a-b)
+
 
 Interview Q:
 1. when to use pre/post increment/decrement operators
@@ -145,6 +148,8 @@ Right Shift >>
 Javascript:
 
 >>>	Bitwise Right Shift with Zero	(10>>>2) = 2
+
+1010 (10) >>> 0010 (2)
 
 
 Logical Operators
@@ -235,6 +240,9 @@ There are some reserved single character escape sequences for use in strings:
 \': single quote (U+0027 APOSTROPHE)
 \": double quote (U+0022 QUOTATION MARK)
 \\: backslash (U+005C REVERSE SOLIDUS)
+
+
+
 
 more details: https://www.youtube.com/watch?v=fpRZsVrVrkU
 
@@ -344,7 +352,8 @@ Js Popup Alert
 prompt()
 alert()
 confirm()
-
+num1=3
+num2=5
 
 
 Coding Exercises
@@ -353,8 +362,25 @@ Javascript program to perform all arithmetic operations
 Javascript program to find sum and average of two numbers
 Javascript program to find area and perimeter of circle	//area=PI*rad*rad, perm=2*PI*rad;
 Javascript program to convert temperature from  Celsius to Fahrenheit  //fahrenheit = (celsius * 9 / 5) + 32;  //celsius to fahrenheit 
+
+
+let cel, fah;
+cel=Number(prompt('enter celsius value: '));
+fah=(cel * 9 / 5) + 32
+console.log(`${cel} in fahrenheit is: ${fah}`);
+
+
+
 Javascript program to find cube of an integer number using pow() function and Exponentiation (**)
 Javascript prgram to swap two numbers without using a temporary variable and using a temp variable
+temp=first
+first=second
+second=temp
+
+a=a-b
+b=a+b
+a=b-a
+
 Javascript program to find square root of any number using sqrt function
 Javascript program to find sum of all numbers from 0 to N without using loop //sum = n*(n+1)/2
 Javascript program to printing value in Decimal, Octal, Hexadecimal, binary // toString()
@@ -371,6 +397,12 @@ console.log("\nHello\bWorld!");   //use of \b
 Explore Math functions
 Explore mathjs.org
 https://www.includehelp.com/c-programs/c-programs-bitwise-programs-and-solutions.aspx (we will cover this exercises after finishing conditional statements and loops)
+
+Short-Circuiting Of Logical Operators
+
+console.log(null || "user"); // user
+console.log("Agnes" || "user"); // Agnes
+
 		
 			Data Types
 
@@ -379,27 +411,406 @@ https://www.includehelp.com/c-programs/c-programs-bitwise-programs-and-solutions
 Primitive Data Types
 
 String
+
+জাভাস্ক্রিপ্টে আমরা তিন ভাবে স্ট্রিং ডিক্লেয়ার করতে পারি। 
+
+"Hello World" // by double quotes
+'Hello World' // by single quotes
+`Hello World` // by template literals or backticks
+
+strings can also be defined as objects with the keyword new:
+
+let firstName = new String("John");
+
+String() constructor or wrapper object
+
+let str1=String('Hello') //string
+let str2=String('123') //string
+
+String.prototype.length
+
+let str='Hello';
+console.log(str.length); //5
+
+instanceof
+typeof
+
 Number
+
+Number নামক constructor বা  function এর মধ্যে যদি "121" (যার টাইপ স্ট্রিং) দেওয়া হয় তাহলে Number function এটিকে Number এ কনভার্ট করে ফেলে। Number function এর মধ্যে যাই দেই না কেনো সেটি Number এ কনভার্ট করার চেষ্টা করবে। 
+
+console.log(Number('123'))  // returns the number 123
+console.log(Number('123') === 123 ) // true
+
+console.log(Number("Javascript"))  // NaN
+console.log(Number(undefined)) // NaN
+
+আবার Number constructor দিয়ে চাইলে Number object ও তৈরি করা যায়। 
+
+const a = new Number('123'); // a === 123 is false
+const b = Number('123');     // b === 123 is true
+a instanceof Number;         // is true
+b instanceof Number;   // is false
+
+
+Static properties
+
+1. Number.EPSILON
+
+console.log(Number.EPSILON) // 2.220446049250313e-16
+
+
+2. Number.MAX_SAFE_INTEGER
+
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER); // expected output: 9007199254740991
+
+console.log(x); // expected output: 9007199254740992
+
+console.log(x === y); // expected output: true
+
+3. Number.MAX_VALUE
+
+console.log(Number.MAX_VALUE) // 1.7976931348623157e+308
+
+
+
+4. Number.MIN_SAFE_INTEGER
+
+console.log(Number.MIN_SAFE_INTEGER) // -9007199254740991
+
+const x = Number.MIN_SAFE_INTEGER - 1;
+const y = Number.MIN_SAFE_INTEGER - 2;
+
+console.log(Number.MIN_SAFE_INTEGER); // expected output: -9007199254740991
+
+console.log(x); // expected output: -9007199254740992
+
+console.log(x === y); // expected output: true
+
+5. Number.MIN_VALUE
+
+console.log(Number.MIN_VALUE) // 5e-324
+
+
+
+6. Number.NaN
+
+জাভাস্ক্রিপ্টে NaN ই এমন একটি ভ্যালু যার সমান সে নিজে না। 
+
+console.log(Number.NaN===Number.NaN); // false
+
+console.log(NaN===NaN); // false
+
+
+
+
+7. Number.NEGATIVE_INFINITY
+
+console.log(Number.NEGATIVE_INFINITY); // -Infinity
+
+
+
+console.log(-Number.MAX_VALUE * 2);
+// expected output: -Infinity"
+
+
+8. Number.POSITIVE_INFINITY
+
+console.log(Number.POSITIVE_INFINITY); // Infinity
+
+console.log(Number.MAX_VALUE * 2);
+// expected output:Infinity
+
+9. Number.prototype
+
+
+
+Static methods
+
+
+1. Number.isNaN()
+
+Number.isNaN() মেথডটি দিয়ে চেক করা যায় কোনো একটি ভ্যালু কি NaN বা  নাম্বার ছাড়া অন্য কিছু কিনা। 
+
+if(Number.isNaN(x){
+    //if NaN this code will be executed
+}
+x এর ভ্যালু যদি নাম্বার ছাড়া অন্য কিছু হয় তাহলেই শুধু এই কনডিশনটি true হবে। Number.isNaN() হচ্ছে isNaN() এর অল্টারনেটিভ ভার্সন এবং isNaN() এর পরিবর্তে Number.isNaN ব্যবহারের পরামর্শ রইলো। 
+
+Number.isNaN(123) //false
+Number.isNaN(-1.23) //false
+Number.isNaN(5-2) //false
+Number.isNaN(0) //false
+Number.isNaN('123') //false
+Number.isNaN('Hello') //false
+Number.isNaN('2005/12/12') //false
+Number.isNaN('') //false
+Number.isNaN(true) //false
+Number.isNaN(undefined) //false
+Number.isNaN('NaN') //false
+Number.isNaN(NaN) //true
+Number.isNaN(0 / 0) //true
+
+
+2. Number.isFinite()
+
+console.log(Number.isFinite(1 / 0));
+// expected output: false
+
+console.log(Number.isFinite(10 / 5));
+// expected output: true
+
+console.log(Number.isFinite(0 / 0));
+// expected output: false
+
+
+Number.isFinite(Infinity);  // false
+Number.isFinite(NaN);       // false
+Number.isFinite(-Infinity); // false
+
+Number.isFinite(0);         // true
+Number.isFinite(2e64);      // true
+
+Number.isFinite('0');       // false, would've been true with
+                            // global isFinite('0')
+Number.isFinite(null);      // false, would've been true with global isFinite(null)
+
+3. Number.isInteger()
+
+
+Number.isInteger(0);         // true
+Number.isInteger(1);         // true
+Number.isInteger(-100000);   // true
+Number.isInteger(99999999999999999999999); // true
+
+Number.isInteger(0.1);       // false
+Number.isInteger(Math.PI);   // false
+
+Number.isInteger(NaN);       // false
+Number.isInteger(Infinity);  // false
+Number.isInteger(-Infinity); // false
+Number.isInteger('10');      // false
+Number.isInteger(true);      // false
+Number.isInteger(false);     // false
+Number.isInteger([1]);       // false
+
+Number.isInteger(5.0);       // true
+Number.isInteger(5.000000000000001); // false
+Number.isInteger(5.0000000000000001); // true
+
+
+
+4. Number.isSafeInteger()
+
+
+
+Number.isSafeInteger(Math.pow(2, 53));      // false
+Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
+
+
+Number.isSafeInteger(3);                    // true
+Number.isSafeInteger(Math.pow(2, 53));      // false
+Number.isSafeInteger(Math.pow(2, 53) - 1);  // true
+Number.isSafeInteger(NaN);                  // false
+Number.isSafeInteger(Infinity);             // false
+Number.isSafeInteger('3');                  // false
+Number.isSafeInteger(3.1);                  // false
+Number.isSafeInteger(3.0);                  // true
+
+
+5. Number.parseFloat(string)
+
+
+
+6. Number.parseInt(string, [radix])
+
+
+
+
+
+Instance methods
+
+Number.prototype.toExponential(fractionDigits)
+
+
+
+If you use the toExponential() method for a numeric literal and the numeric literal has no exponent and no decimal point, leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.
+
+var numObj = 77.1234;
+
+console.log(numObj.toExponential());  // logs 7.71234e+1
+console.log(numObj.toExponential(4)); // logs 7.7123e+1
+console.log(numObj.toExponential(2)); // logs 7.71e+1
+console.log(77.1234.toExponential()); // logs 7.71234e+1
+console.log(77 .toExponential());     // logs 7.7e+1
+
+Number.prototype.toFixed(digits)
+
+
+
+let numObj = 12345.6789
+
+numObj.toFixed()       // Returns '12346': note rounding, no fractional part
+numObj.toFixed(1)      // Returns '12345.7': note rounding
+numObj.toFixed(6)      // Returns '12345.678900': note added zeros
+
+2.34.toFixed(1)        // Returns '2.3'
+2.35.toFixed(1)        // Returns '2.4'. Note it rounds up
+2.55.toFixed(1)        // Returns '2.5'. Note it rounds down - see warning above
+-2.34.toFixed(1)       // Returns -2.3 (due to operator precedence, negative number literals don't return a string...)
+(-2.34).toFixed(1)     // Returns '-2.3'
+
+
+Number.prototype.toLocaleString([locales [, options]])
+
+
+let x=123456.789
+console.log(x.toLocaleString('ar-EG'))
+// expected output: "١٢٣٬٤٥٦٫٧٨٩"
+
+console.log(x.toLocaleString('bn-BD'))
+// expected output: ১,২৩,৪৫৬.৭৮৯
+
+var d = new Date();
+var n = d.toLocaleString();
+console.log(n);
+
+
+
+Number.prototype.toPrecision(precision)
+
+
+let numObj = 5.123456
+
+console.log(numObj.toPrecision())    // logs '5.123456'
+console.log(numObj.toPrecision(5))   // logs '5.1235'
+console.log(numObj.toPrecision(2))   // logs '5.1'
+console.log(numObj.toPrecision(1))   // logs '5'
+
+numObj = 0.000123
+
+console.log(numObj.toPrecision())    // logs '0.000123'
+console.log(numObj.toPrecision(5))   // logs '0.00012300'
+console.log(numObj.toPrecision(2))   // logs '0.00012'
+console.log(numObj.toPrecision(1))   // logs '0.0001'
+
+// note that exponential notation might be returned in some circumstances
+console.log((1234.5).toPrecision(2)) // logs '1.2e+3'
+
+
+Number.prototype.toString([radix])
+
+
+
+let count = 10
+
+console.log(count.toString())    // displays '10'
+console.log((17).toString())     // displays '17'
+console.log((17.2).toString())   // displays '17.2'
+
+let x = 6
+
+console.log(x.toString(2))       // displays '110'
+console.log((254).toString(16))  // displays 'fe'
+
+console.log((-10).toString(2))   // displays '-1010'
+console.log((-0xff).toString(2)) // displays '-11111111'
+
+
+
+Number.prototype.valueOf()
+
+const numObj = new Number(42);
+console.log(typeof numObj);
+// expected output: "object"
+
+const num = numObj.valueOf();
+console.log(num);
+// expected output: 42
+
+console.log(typeof num);
+// expected output: "number"
+
+
+let numObj = new Number(10)
+console.log(typeof numObj)  // object
+
+let num = numObj.valueOf()
+console.log(num)            // 10
+console.log(typeof num)     // number
+
+
+
+
+
 Boolean
+
+নিম্নোক্ত ভ্যালুগুলোর জন্য কনডিশন সর্বদা false আসবে। 
+0, -0, null, false, NaN, undefined, or the empty string ("").
+
+যেকোনো অবজেক্ট এর এমনকি Boolean অব্জেক্ট এরও ইনিসিয়াল ভ্যালু যদি false ও করে দেওয়া হয় তাও সেটি true ভ্যালু প্রডিউস করে।
+
+var myFalse = new Boolean(false);   // initial value of false
+console.log(myFalse);
+var g = Boolean(myFalse);       // initial value of true
+console.log(g);
+var myString = new String('Hello'); // string object
+var s = Boolean(myString);      // initial value of true
+console.log(s);
+
+// Boolean {false}
+// true
+// true
+
+
+Constructor
+
+1. Boolean()
+Creates a new Boolean object.
+
+const flag1 = new Boolean(true);
+
+console.log(flag1.toString());
+// expected output: "true"
+
+const flag2 = new Boolean(1);
+
+console.log(flag2.toString());
+// expected output: "true"
+
+
 null
 undefined
 Symbols (ES6)
 
-Non-primitive Data Type
-
-Object
-Date
-Array
-
 https://www.programiz.com/javascript/data-types
 
-null and undefined in JavaScript
+Empty Values
+
+null and undefined
 
 type conversion
+
+Automatic Type Conversion
+
+console.log(8*null); // 0
+console.log("5"-1); // 4
+console.log("5"+1); // 51
+console.log("five"*2); // NaN
+console.log(false==0); // true
+
 
 NaN
 
 Weird behaviors of javascript
+
+
+
 
 Interview Q:
 1. what are the falsy values in javascript?
@@ -436,4 +847,34 @@ null and undefined in JavaScript
 type conversion in javascript
 NaN in javascript
 Weird behaviors of javascript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
