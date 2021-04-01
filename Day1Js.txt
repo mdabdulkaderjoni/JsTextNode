@@ -1,3 +1,25 @@
+Chapter 1 - Variables, identifiers, memory address
+Chapter 2 - operators
+Chapter 3 - Data types, format specifiers
+Chapter 4 - Conditional Statements
+Chapter 5 - Loop Statement
+Chapter 6 - Array data structure and algorithom(insert, sort, merge, delete, search)
+Chapter 7 - String
+Chapter 8 - Functions
+
+
+Day 1 - Variables, operators
+Day 2 - Data types
+Day 3 - if else, switch theory
+Day 4 - exercise
+Day 5 - loop theory
+Day 6 - loop exercise 
+Day 7 - loop exercise
+
+
+
+
+
                         What is Token?
 
 			what is variable?
@@ -418,14 +440,17 @@ String
 'Hello World' // by single quotes
 `Hello World` // by template literals or backticks
 
-strings can also be defined as objects with the keyword new:
-
-let firstName = new String("John");
-
 String() constructor or wrapper object
 
 let str1=String('Hello') //string
 let str2=String('123') //string
+let str3=String(true) //string
+
+strings can also be defined as objects with the keyword new:
+
+let firstName = new String("John");
+
+
 
 String.prototype.length
 
@@ -847,6 +872,8 @@ null and undefined in JavaScript
 type conversion in javascript
 NaN in javascript
 Weird behaviors of javascript
+
+
 
 
 
