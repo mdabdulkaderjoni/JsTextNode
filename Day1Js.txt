@@ -161,6 +161,7 @@ Left Shift <<
 3 << 2 = 12 which is 3 * (2 to the power 2)
 3 << 3 = 24 which is 3 * (2 to the power 3)
 
+
 Right Shift >>
 24 >> 1 = 12 which is 3 / (2 to the power 1)
 24 >> 2 = 6  which is 3 / (2 to the power 2)
