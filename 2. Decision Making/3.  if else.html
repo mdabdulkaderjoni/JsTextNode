@@ -1,0 +1,95 @@
+<!Doctype htm>
+<html>
+<body>
+<pre style="font-size:17px">
+
+<h2 align="center">if...else statement</h2>
+
+
+Sometimes you want to execute a piece of code in case of the expression in the if statement evaluates to false. You can use the 
+second form of the if statement which is known as if else statement. The following illustrates the syntax of the if else statement:
+
+
+  if(expression){
+      statement block1;
+  }
+  else{
+      statement block2;
+  }
+
+
+  <img src="./Images/if else.png">
+
+
+The following example demonstrates how to use the if else statement:
+
+      let x=Number(prompt('Enter a number'));
+
+      if(x > 0){
+          console.log("\nThe number x is greater than 0");
+      }
+      else{
+          console.log("\nThe number x is less than or equal zero");
+      }
+
+This program asks users to enter a number. It displays the corresponding message based on the input value.
+
+
+<mark>Nested if....else statement</mark>
+The general form of a nested if...else statement is,
+
+  if( expression )
+  {
+      if( expression1 )
+      {
+          statement block1;
+      }
+      else 
+      {
+          statement block2;
+      }
+  }
+  else
+  {
+      statement block3;
+  }
+
+
+
+if expression is false then statement-block3 will be executed, otherwise the execution continues and 
+enters inside the first if to perform the check for the next if block, where if expression 1 is true 
+the statement-block1 is executed otherwise statement-block2 is executed.
+
+Example:
+
+      let a, b, c;
+
+      if(a &gt; b)
+      { 
+          if(a &gt; c)
+          {
+              console.log("a is the greatest");
+          }
+          else 
+          {
+              console.log("c is the greatest");
+          }
+      }
+      else
+      {
+          if(b &gt; c)
+          {
+              console.log("b is the greatest");
+          }
+          else
+          {
+              console.log("c is the greatest");
+          }
+      }
+ 
+
+
+                                              
+</pre>
+</body>
+</html>

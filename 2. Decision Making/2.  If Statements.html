@@ -1,0 +1,268 @@
+<!Doctype html>
+<html>
+<head>
+       <meta charset="UTF-8">
+</head>
+<body>
+<pre style="font-size:18px;margin-left:5px;">
+
+
+                                                     <h3>if statement</h3>
+
+
+The If statement is used when we want to test a condition, which is evaluated(মূল্যায়ন)for a boolean value- true or false.
+
+1. If this condition is true then the statement or a block of statements connected to the If statement is executed.
+
+2. If this continue is false then the statement or a block of statements connected to the If statement is not executed.
+   structure of an if statement is as follows:
+
+if ( statement is TRUE ){
+    Execute this line of code
+}
+
+
+The following flowchart illustrates the if statement:
+
+
+                            <img src="./Images/if.png">
+
+
+
+
+
+Meaning of If Statement :
+
+1. It Checks whether the given Expression is Boolean or not !!
+2. If Expression is True Then it executes the statement otherwise jumps to next_instruction
+
+
+                            <img src="./Images/if2.jpg">
+ 
+Sample Program Code :
+
+      let a=5,b=6,c;
+      c = a + b ;
+
+      if(c==24)
+
+          console.log("Execute me 1");
+
+          console.log("Execute me 2");
+
+
+  Output : Execute me 2
+
+
+  if(conditional){
+      Statement No 1
+      Statement No 2
+      Statement No 3
+      . 
+      .
+      .
+      Statement No N
+  }
+
+
+<b>Note</b> : 1. More than One Conditions can be Written inside If statement.
+
+Let's see an example:
+
+      let a=5,b=6,c;
+      c = a + b ;
+
+      if (c==20)
+      {
+          console.log("Execute me 1\n");
+      }
+      {
+          console.log("Execute me 2\n");
+      }
+      {
+          console.log("Execute me 3\n");
+      }
+      {
+          console.log("Execute me 4\n");
+      }
+  
+
+  Output : Execute me 2
+           Execute me 3
+           Execute me 4
+
+
+2. Opening and Closing Braces are required only when “Code” after if statement occupies multiple lines.
+
+  if(conditional)
+
+      Statement No 1
+      Statement No 2
+      Statement No 3
+
+
+In the above example only Statement 1 is a part of if Statement.
+
+Code will be executed if condition statement is True.
+<mark>Non-Zero Number Inside if  means “TRUE Condition”</mark>
+
+    let a=1, b=-10, c=0;
+	
+    if(a==10){
+        console.log("First condition is true\n");
+    }
+	
+    if(b){
+        console.log("Second condition is true\n");
+    }
+	
+    if(c){
+        console.log("Third condition is true\n");
+    }
+	
+
+    Output: First condition is true 
+            Second condition is true 
+
+<mark>In this program there are three conditions</mark>
+
+1. if(a==10)
+   This test condition is true because the value of a is 10.
+
+2. if(b)
+   This test condition is true because the value of b is -10 that is a non zero value.
+
+3. if(c)
+   This test condition is not true because the value of c is 0.
+ 
+
+
+
+Program flow of If Statement :           
+
+                                      <img src="./Images/if3.jpg">
+
+
+
+
+
+Let’s take a look at the following example:
+
+      let x=Number(prompt('Enter a number: '))
+
+      if(x &gt; 0){
+         console.log("\nThe number is greater than 0",x);
+      }
+
+
+
+
+In the above, the program asked users to enter a number. If the number is greater than zero, 
+it displays a message showing that otherwise, it does nothing.
+
+<mark>Here is an example</mark>
+
+      let number=Number(prompt('Enter a number'))    
+      if(number%2==0){    
+          console.log("number is even number");    
+      }
+
+<mark>Example of multiple if statements</mark>
+
+We can use multiple if statements to check more than one conditions.
+
+      let x, y;
+      x=Number(prompt('Enter a number'))
+      y=Number(prompt('Enter a number'))
+
+      if (x&gt;y){
+          console.log("x is greater than y\n");
+      }
+
+      if (x&lt;y){
+          console.log("x is less than y\n");
+      }
+
+      if (x==y){
+          console.log("x is equal to y\n");
+      }
+
+      console.log("End of Program");
+
+In the above example the output depends on the user input.
+
+
+                             
+
+<mark>Program to find the largest number of the three.</mark>
+
+
+     let a, b, c;  
+     a=Number(prompt('Enter value of a: '))
+     b=Number(prompt('Enter value of b: '))
+     c=Number(prompt('Enter value of c: '))
+ 
+      if(a&gt;b && a>c){  
+          console.log("a is largest");  
+      } 
+ 
+      if(b>a  && b > c){  
+          console.log("b is largest");  
+      }
+  
+      if(c>a && c>b){  
+          console.log("c is largest");  
+      } 
+ 
+      if(a == b && a == c)   {  
+          console.log("All are equal");   
+      }  
+
+
+<mark>Program to print days</mark>                                                      
+
+      let day=Number(prompt('Enter a number between 1-7'))
+      if(day==1){  
+          console.log("Saturday");  
+      } 
+ 
+      if(day==2){  
+          console.log("Sunday");  
+      }
+  
+      if(day==3){  
+          console.log("Monday");  
+      } 
+
+      if(day==4){  
+          console.log("Tuesday");   
+      } 
+
+      if(day==5){  
+          console.log("Wednesday");  
+      }
+  
+      if(day==6){  
+          console.log("Thursday");  
+      } 
+ 
+      if(day==7){  
+          console.log("Friday");   
+      }  
+
+Nested if statements
+
+     let num=12;
+     if(num>5){
+         console.log('value of num is greater than 5')
+         if(num%2==0){
+             console.log('value of num is even number')
+             if(num==10){
+                 console.log('value of num is 10')
+             }
+         }
+     }
+
+</pre>
+</body>
+</html>

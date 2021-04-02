@@ -1,0 +1,200 @@
+<!Doctype html>
+<html>
+<body>
+<pre style="font-size:17px;">
+
+<h2 align="center">else if statement</h2>
+
+If you want to use more than one condition, you can use if else-if statement. The syntax of the if else if statement is as follows:
+
+
+  if(condition-1)
+  {
+     statement block1;
+
+  }
+  else if (condition-2)
+  {
+     statement block2;
+
+  }
+  else if (condition-3)
+  {
+     statement block3;
+
+  }
+  else
+  {
+     statement block4;
+  }
+
+
+The else-if statement is used to make multiway decisions. The conditions in the corresponding if and 
+else if branch evaluates in sequence from top to bottom. If a condition evaluates to true, 
+the statements associated with it executes and terminates the whole chain.
+
+The following flowchart illustrates the if else statement:
+
+if else statement flowchart
+
+              <img src="./Images/if else.png">
+
+You can have as many branches as you want but it is not recommended because the code looks less readable and difficult to maintain.
+
+The following example compares the input number with zero (0) and displays the corresponding message:
+
+
+     let x=33;
+ 
+      if(x &gt; 0){
+          console.log('x is greater than 0');
+      }else if(x &lt; 0){
+          console.log('x is less than 0');
+      }else{
+          console.log("zero");
+      }
+
+Putting it all together
+
+We will use the if else statement to develop a simple currency conversion program.
+
+  const usd_to_euro = 0.77, usd_to_aus = 0.96, usd_to_yen = 95.90, usd_to_yuan = 6.21, usd_to_rupee 54.32;
+ 
+  let usd_amount, /* USD amount*/
+      fc_amount,   /* Foreign currency amount*/
+      rate;
+      currency;
+ 
+       //Enter amount in USD
+       usd_amount=parseFloat(prompt("Please enter USD amount:\n"));
+ 
+       currency=parseInt(prompt('Please choose the currency:\n
+                                 1 - Euro\n
+                                 2 - Australia Dollar\n
+                                 3 - Japanese Yen\n
+                                 4 - Chinese Yuan\n
+                                 5 - Indian Rupee\n
+                                 6 - Other\n'))
+ 
+ 
+       // determine the rate 
+       if(currency == 1)
+          rate = usd_to_euro;
+       else if(currency == 2)
+          rate = usd_to_aus;
+       else if(currency == 3)
+          rate = usd_to_yen;
+       else if(currency == 4)
+          rate = usd_to_yuan;
+       else if(currency == 5)
+          rate = usd_to_rupee;
+       else{
+          rate=parseFloat(prompt('Enter the exchange rate USD -> Foreign Currency\n'))
+       }
+ 
+       //Convert currency
+       if(rate > 0){
+          fc_amount = usd_amount * rate;
+       }
+ 
+      console.log('fc amount is: '+fc_amount)
+ 
+
+
+How it works.
+
+First, we define some popular exchange rates using constants such as USD to Euro, USD to Yen.
+
+Second, we ask users to input USD amount and choose the corresponding currency.
+
+Third, based on the user choice from the menu from 1 to 5, we calculate the foreign currency amount. If users entered unknown currency, 
+the program asks the user to enter the exchange rate before doing the calculation.
+The example of an if-else-if statement  is given below.
+
+
+Flow chart of if else ladder:
+
+<img src="./Images/else if ladder.png">
+
+      let number=parseInt(prompt('Enter a number'))
+     
+      if(number==10)
+      {    
+          console.log("number is equals to 10");    
+      }    
+      else if(number==50)
+      {    
+          console.log("number is equal to 50");    
+      }    
+      else if(number==100)
+      {    
+          console.log("number is equal to 100");    
+      }    
+      else
+      {    
+          console.log("number is not equal to 10, 50 or 100");    
+      }    
+
+
+
+Program to calculate the grade of the student according to the specified marks.
+
+      let marks=Number(prompt('Enter your marks: '))
+      if(marks > 85 && marks <= 100)  
+      {  
+          console.log("Congrats ! you scored grade A ...");   
+      }  
+      else if (marks &lt; 60 && marks <= 85)   
+      {  
+          console.log("You scored grade B + ...");  
+      }  
+      else if (marks &lt; 40 && marks <= 60)   
+      {  
+          console.log("You scored grade B ...");  
+      }  
+      else if (marks &lt; 30 && marks <= 40)   
+      {  
+          console.log("You scored grade C ...");   
+      }  
+      else   
+      {  
+          console.log("Sorry you are fail ...");   
+      }  
+  } 
+
+  <mark>Program to conver Fahrenheit to Celsius</mark>
+ 
+      let fh,cl,choice;
+ 
+      printf("\n1: Convert temperature from Fahrenheit to Celsius."); 
+      printf("\n2: Convert temperature from Celsius to Fahrenheit.");
+      printf("\nEnter your choice (1, 2): ");
+      scanf("%d",&choice);
+      choice=Number(prompt('
+                          1: Convert temperature from Fahrenheit to Celsius\n
+                          2: Convert temperature from Celsius to Fahrenheit'))
+ 
+      if(choice ==1)
+      {
+          fh=Number(prompt('Enter temperature in Fahrenheit: '))
+          cl= (fh - 32) / 1.8;
+          console.log("Temperature in Celsius: ",cl);
+      }
+
+      else if(choice==2)
+      {
+         
+          cl=Number(prompt('Enter temperature in Celsius: '))
+          fh= (cl*1.8)+32;
+          console.log("Temperature in Fahrenheit: ",fh);
+      }
+
+      else
+      {
+          console.log("\nInvalid Choice !!!");
+      }
+
+ 
+</pre>
+</body>
+</html>

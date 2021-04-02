@@ -1,0 +1,208 @@
+<!Doctype html>
+<html>
+<body>
+<pre style="font-size:17px;">
+                               <h2 align="center">Switch statement</h2>
+
+When you want to solve multiple option type problems, for example: Menu like program, where one value is associated with each option and 
+you need to choose only one at a time, then, switch statement is used.
+
+Switch statement is a control statement that allows us to choose only one choice among the many given choices. The expression in switch 
+evaluates to return an integral value, which is then compared to the values present in different cases. It executes that block of code 
+which matches the case value. If there is no match, then default block is executed(if present). The general form of switch statement is,
+
+switch(expression)
+{
+    case value-1:
+    	block-1;
+    	break;
+    case value-2:
+    	block-2;
+    	break;
+    case value-3:
+    	block-3;
+    	break;
+    case value-4:
+    	block-4;
+   	    break;
+    default:
+   	    default-block;
+    	break;
+}
+
+<h3>This is how it works:</h3>
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+If there is no match, the default code block is executed.
+
+<h3>Points to Remember:</h3>
+break statements are used to exit the switch block. It isn't necessary to use break after each block, but if you do not use it, 
+then all the consecutive blocks of code will get executed after the matching block.
+
+let i = 1;
+switch(i)
+{
+    case 1:    
+        console.log("A");        // No break
+    case 2:
+        console.log("B");        // No break
+    case 3:
+        console.log("C");
+        break;
+}
+
+output: A B C
+
+The output was supposed to be only A because only the first case matches, but as there is no break statement after that block, 
+the next blocks are executed too, until it a break statement in encountered or the execution reaches the end of the switch block.
+
+default case is executed when none of the mentioned case matches the switch expression. 
+The default case can be placed anywhere in the switch case. Even if we don't include the default case, switch statement works.
+
+<h3>The getDay() method returns the weekday as a number between 0 and 6.</h3>
+
+This example uses the weekday number to calculate the weekday name:
+
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+console.log(day)
+
+Sometimes you will want different switch cases to use the same code.
+
+In this example case 4 and 5 share the same code block, and 0 and 6 share another code block:
+
+let text;
+let n = new Date().getDay()
+console.log(n)
+switch (n) {
+  case 4:
+  case 5:
+    text = "Soon it is Weekend";
+    break;
+  case 0:
+  case 6:
+    text = "It is Weekend";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+console.log(text)
+
+<mark>Switch cases use strict comparison (===)</mark>
+
+
+
+             <img src="./Images/switch.png">
+
+We can do basic calculations and also take input inside case
+
+Example of switch statement
+
+         let a, b, c, choice;
+
+          choice=Number(prompt('1. Press 1 for addition\n
+                                2. Press 2 for subtraction'))
+        
+          switch(choice)
+          {
+              case 1:
+                  a=Number(prompt('Enter a number'))
+                  b=Number(prompt('Enter another number'))
+                  c = a + b;
+                  console.log('Sum is: '+c)
+                  break;
+
+              case 2:
+                 a=Number(prompt('Enter a number'))
+                 b=Number(prompt('Enter another number'))
+                 c = a - b;
+                 console.log('Sub is: '+c)
+                 break;
+
+              default:
+                  console.log("you have passed a wrong key");
+                 
+          }
+
+
+<h3>Nested switch case statement</h3>
+
+Nesting of switch statements are allowed, which means you can have switch statements inside another switch block. 
+However, nested switch statements should be avoided as it makes the program more complex and less readable.
+
+
+We can use as many switch statement as we want inside a switch statement. Such type of statements is called nested switch case statements. 
+Consider the following example. 
+  
+     const i = 10,  j = 20;  
+   
+     switch(i) 
+     {  
+     
+        case 10:   
+           console.log("the value of i evaluated in outer switch\n");  
+           break;
+        case 20: 
+           switch(j) 
+           {  
+              case 20:  
+                 console.log("The value of j evaluated in nested switch\n");  
+           }  
+           break;
+       }  
+     
+
+
+<h3>Difference between switch and if</h3>
+
+if statements can evaluate float conditions. switch statements cannot evaluate float conditions.
+if statement can evaluate relational operators. switch statement cannot evaluate relational operators i.e 
+they are not allowed in switch statement.
+
+let text;
+let n=5.5
+console.log(n)
+switch (n) {
+ 
+  case 5:
+    text = "Soon it is Weekend";
+    break;
+
+  case 6:
+    text = "It is Weekend";
+    break;
+    
+  default:
+    text = "Looking forward to the Weekend";
+}
+console.log(text)
+
+output: Looking forward to the Weekend
+
+<mark>For more information search in google</mark>
+
+</pre>
+</body>
+</html>

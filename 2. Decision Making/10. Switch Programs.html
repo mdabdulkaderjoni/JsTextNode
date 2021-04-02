@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+      <title>Switch statements</title>
+</head>
+<body>
+<pre style="font-size:17px;margin-left:20px;">
+
+<h3>C program to read weekday number and print weekday name using switch.</h3>
+
+
+#include &lt;stdio.h>
+ int main()
+{
+    int wDay;
+     
+    printf("Enter weekday number (0-6): ");
+    scanf("%d",&wDay);
+     
+    switch(wDay)
+    {
+        case 0: 
+            printf("Sunday");
+            break;
+        case 1: 
+            printf("Monday");
+            break;
+        case 2: 
+            printf("Tuesday");
+            break;
+        case 3: 
+            printf("Wednesday");
+            break;
+        case 4: 
+            printf("Thursday");
+            break;
+        case 5: 
+            printf("Friday");
+            break;
+        case 6: 
+            printf("Saturday");
+            break;
+        default:
+            printf("Invalid weekday number.");
+    }
+    printf("\n");
+    return 0;
+}
+
+
+Output
+
+    First Run:
+    Enter weekday number (0-6): 3
+    Wednesday
+
+    Second run:
+    Enter weekday number (0-6): 9
+    Invalid weekday number.  
+
+
+
+<h3>C program to read gender (M/F) and print corresponding gender using switch.</h3>
+
+#include &lt;stdio.h> 
+int main()
+{
+    char gender;
+     
+    printf("Enter gender (M/m or F/f): ");
+    scanf("%c",&gender);
+     
+    switch(gender)
+    {
+        case 'M':
+        case 'm':
+            printf("Male.");
+            break;
+        case 'F':
+        case 'f':
+            printf("Female.");
+            break;
+        default:
+            printf("Unspecified Gender.");
+    }
+    printf("\n");
+    return 0;
+}
+
+
+Output
+
+    First Run:
+    Enter gender (M/m or F/f): M
+    Male.
+
+    Second Run:
+    Enter gender (M/m or F/f): x
+    Unspecified Gender.
+
+
+<h3>Check VOWEL or CONSONANT program using switch</h3>
+
+
+#include &lt;stdio.h> 
+int main()
+{
+    char ch;
+     
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+     
+    //condition to check character is alphabet or not
+    if((ch&gt;='A' && ch&lt;='Z') || (ch&gt;='a' && ch&lt;='z'))
+    {
+        //check for VOWEL or CONSONANT
+        switch(ch)
+        {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+                printf("%c is a VOWEL.\n",ch);
+                break;
+            default:
+                printf("%c is a CONSONANT.\n",ch);            
+        }
+    }
+    else
+    {
+        printf("%c is not an alphabet.\n",ch);
+    }
+ 
+    return 0;
+}
+Output
+
+    First Run:
+    Enter a character: E  
+    E is a VOWEL.  
+ 
+    Second Run:
+    Enter a character: X
+    X is a CONSONANT.
+
+    Third Run:
+    Enter a character: +
+    + is not an alphabet.
+
+
+
+<h3>Calculator program with Basic operations using switch</h3>
+
+
+#include &lt;stdio.h> 
+int main()
+{
+    int num1,num2;
+    float result;
+    char ch;    //to store operator choice
+     
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("Enter second number: ");
+    scanf("%d",&num2);
+     
+    printf("Choose operation to perform (+,-,*,/,%): ");
+    scanf(" %c",&ch);
+     
+    result=0;
+    switch(ch)    
+    {
+        case '+':
+            result=num1+num2;
+            break;
+             
+        case '-':
+            result=num1-num2;
+            break;
+         
+        case '*':
+            result=num1*num2;
+            break;
+             
+        case '/':
+            result=(float)num1/(float)num2;
+            break;
+             
+        case '%':
+            result=num1%num2;
+            break;
+        default:
+            printf("Invalid operation.\n");
+    }
+ 
+    printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
+    return 0;
+}
+
+
+Output
+
+    First run:
+    Enter first number: 10
+    Enter second number: 20 
+    Choose operation to perform (+,-,*,/,%): +
+    Result: 10 + 20 = 30.000000 
+
+    Second run:
+    Enter first number: 10
+    Enter second number: 3
+    Choose operation to perform (+,-,*,/,%): /
+    Result: 10 / 3 = 3.333333 
+
+    Third run:
+    Enter first number: 10
+    Enter second number: 3
+    Choose operation to perform (+,-,*,/,%): >
+    Invalid operation.
+    Result: 10 > 3 = 0.000000 
+
+
+﻿
+<h3>C program to check whether number is EVEN or ODD using switch.</h3>
+ 
+#include &lt;stdio.h> 
+int main()
+{
+    int number;
+     
+    printf("Enter a positive integer number: ");
+    scanf("%d",&number);
+     
+    switch(number%2) //this will return either 0 or 1
+    {
+        case 0:
+            printf("%d is an EVEN number.\n",number);
+            break;
+        case 1:
+            printf("%d is an ODD number.\n",number);
+            break;
+    }
+     
+    return 0;
+}
+
+
+Output
+
+First run:
+Enter a positive integer number: 10 
+10 is an EVEN number. 
+
+Second run:
+Enter a positive integer number: 11 
+11 is an ODD number.
+
+
+<h3>Program to find number of days in a month using C</h3>
+
+#include &lt;stdio.h>
+int main()
+{
+	int month;
+	int days;
+	
+	printf("Enter month: ");
+	scanf("%d",&month);
+	
+	switch(month)
+	{
+		case  4:
+		case  6:
+		case  9:
+		case 11:
+			days=30;
+			break;
+		case  1:
+		case  3:
+		case  5:
+		case  7:
+		case  8:
+		case 10:
+		case 12:
+			days=31;
+			break;
+			
+		case 2:
+			days=28;
+			break;
+		
+		default:
+			days=0;
+			break;		
+	}
+	
+	if(days)
+		printf("Number of days in %d month is: %d\n",month,days);
+	else
+		printf("You have entered an invalid month!!!\n");
+	
+	return 0;
+	
+}
+
+
+Output
+
+First run:
+Enter month: 3
+Number of days in 3 month is: 31
+
+Second run:
+Enter month: 2
+Number of days in 2 month is: 28
+
+Third run:
+Enter month: 11 
+Number of days in 11 month is: 30 
+
+Fourth run:
+Enter month: 13 
+You have entered an invalid month!!!
+
+
+
+</pre>
+</body>
+</html>
