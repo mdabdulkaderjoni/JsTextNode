@@ -1,3 +1,11 @@
+<!Doctype html>
+<html>
+<head>
+       <meta charset="UTF-8">
+</head>
+<body>
+<pre style="font-size:18px;margin-left:5px;">
+
 Chapter 1 - Variables, identifiers, memory address
 Chapter 2 - operators
 Chapter 3 - Data types, format specifiers
@@ -20,13 +28,13 @@ Day 7 - loop exercise
 
 
 
-                        What is Token?
+<h2>What is Token?</h2>
 
-			what is variable?
+<h2 style="color:purple">Variable?</h2>
 
 JavaScript variables are containers for storing data values.
 
-	what is Identifiers?
+<h3>what is Identifiers?</h3>
 
 All JavaScript variables must be identified with unique names.
 
@@ -38,14 +46,14 @@ JavaScript identifiers are case-sensitive.
 
 	differences between global variables and local variables? //will be discussed in function chapter
 
-Interview Q: 
+<h2 style="color:green">Interview JS</h2>
 1. is javascript strongly-typed or loosel-typed?
 2. differences between global variables and local variables?
 3. what is the difference between var, let and const keywords?
 4. what are Template Literals?
 
 
-			JavaScript Operators
+<h2 style="color: purple;">JavaScript Operators</h2>
 
 JavaScript operators are symbols that are used to perform operations on operands. For example:
 
@@ -55,7 +63,7 @@ var sum=10+20;
 There are following types of operators in JavaScript.
 
 
-Arithmetic Operators
+<h3>Arithmetic Operators</h3>
 
 +	Addition	10+20 = 30
 -	Subtraction	20-10 = 10
@@ -64,7 +72,7 @@ Arithmetic Operators
 %	Modulus (Remainder)	20%10 = 0
 
 
-Increment/Decrement Operators
+<h3>Increment/Decrement Operators</h3>
 
 ++	Increment	var a=10; a++; Now a = 11
 --	Decrement	var a=10; a--; Now a = 9
@@ -100,12 +108,13 @@ console.log(c,b);
 var x=12;
 x=++x //correct
 
-lexical analysis
+<h3 style="color: red;">Search Content</h3>
 phrase of compiler
+lexical analysis
 
 
 
-Interview Q:
+<h2 style="color:green">Interview JS</h2>
 1. when to use pre/post increment/decrement operators
 2. what is lvalue and rvalue?
 3. differences between unary and binay?
@@ -113,32 +122,32 @@ Interview Q:
 5. is ! binary or unary?
 6. is using the + or unary plus operator the fastest way in converting a string to a number?
 
-Comparison (Relational) Operators
+<h3>Comparison (Relational) Operators</h3>
 
 ==	Is equal to	10==20 = false
 !=	Not equal to	10!=20 = true
 >	Greater than	20>10 = true
 >=	Greater than or equal to	20>=10 = true
-<	Less than	20<10 = false
-<=	Less than or equal to	20<=10 = false
+&#60;	Less than	20&#60;10 = false
+&#60;=	Less than or equal to	20&#60;=10 = false
 
-Javascript:
+<h3 style="color:darkslategray">Extra in Javascript</h3>
 
 ===	Identical (equal and of same type)	10==20 = false
 !==	Not Identical	20!==20 = false
 
-Interview Q:
+<h2 style="color:green">Interview JS</h2>
 
 1. difference between == and === equal operator in javascript
 
 
-Bitwise Operators
+<h3>Bitwise Operators</h3>
 
 &	Bitwise AND	(10==20 & 20==33) = false
 |	Bitwise OR (inclusive)	(10==20 | 20==33) = false
 ^	Bitwise XOR (exclusive)	(10==20 ^ 20==33) = false
 ~	Bitwise NOT	(~10) = -10
-<<	Bitwise Left Shift	(10<<2) = 40
+&#60;&#60;	Bitwise Left Shift	(10<<2) = 40
 >>	Bitwise Right Shift	(10>>2) = 2
 
 AND &
@@ -156,10 +165,10 @@ XOR ^
 0 ^ 1 = 1
 1 ^ 1 = 0
 
-Left Shift <<
-3 << 1 = 6  which is 3 * (2 to the power 1)
-3 << 2 = 12 which is 3 * (2 to the power 2)
-3 << 3 = 24 which is 3 * (2 to the power 3)
+Left Shift &#60;&#60;
+3 &#60;&#60; 1 = 6  which is 3 * (2 to the power 1)
+3 &#60;&#60; 2 = 12 which is 3 * (2 to the power 2)
+3 &#60;&#60; 3 = 24 which is 3 * (2 to the power 3)
 
 
 Right Shift >>
@@ -168,14 +177,14 @@ Right Shift >>
 24 >> 3 = 3  which is 3 / (2 to the power 3)
 
 
-Javascript:
+<h3 style="color:darkslategray">Extra in Javascript</h3>
 
 >>>	Bitwise Right Shift with Zero	(10>>>2) = 2
 
 1010 (10) >>> 0010 (2)
 
 
-Logical Operators
+<h3>Logical Operators</h3>
 
 &&	Logical AND	(10==20 && 20==33) = false
 ||	Logical OR	(10==20 || 20==33) = false
@@ -183,19 +192,19 @@ Logical Operators
 
 
 
-Javascript:
+<h3 style="color:darkslategray">Extra in Javascript</h3>
 
 ?? Nullish coalescing operator
 ?. Optional chaining
 
-Interview Q:
+<h2 style="color:green">Interview JS</h2>
 1. What does the && operator do?
 2. what does the || operator do?
 3. what does the !! operator do?
 4. which operator checks if the value is null?
 5. which opearator is called the optional chaning operator?
 
-Assignment Operators
+<h3>Assignment Operators</h3>
 
 =	Assign	10+10 = 20
 +=	Add and assign	var a=10; a+=20; Now a = 30
@@ -203,20 +212,20 @@ Assignment Operators
 *=	Multiply and assign	var a=10; a*=20; Now a = 200
 /=	Divide and assign	var a=10; a/=2; Now a = 5
 %=	Modulus and assign	var a=10; a%=2; Now a = 0
-<<=
+&#60;&#60;=
 >>=
 &=
 |=
 ^=
 
-Javascript:
+<h3 style="color:darkslategray">Extra in Javascript</h3>
 
 >>>=
 **= Exponentiation assignment 
 ??= Logical nullish assignment 
 
 
-Special Operators
+<h3>Special Operators</h3>
 
 (?:)	Conditional Operator returns value based on the condition. It is like if-else.
 ,	Comma Operator allows multiple expressions to be evaluated as single statement.
@@ -225,17 +234,17 @@ new	creates an instance (object)
 typeof	checks the type of object.
 void	it discards the expression's return value.
 
-Interview Q:
+<h2 style="color:green;">Interview JS</h2>
 1. what is the meaning of void?
 2. use and live example of instanceof operator
 
-Javascript:
+<h3 style="color:darkslategray">Extra in Javascript</h3>
 
 delete	Delete Operator deletes a property from the object.
 in	In Operator checks if object has the given property
 yield	checks what is returned in a generator by the generator's iterator.
 
-
+<h3 style="color:red;">Search Content</h3>
 binary operators and unary operators?
 
 operator precedence
@@ -244,11 +253,11 @@ operator precedence
 
 + - is left to right
 
-Interview Q:
+<h2 style="color:green;">Interview JS</h2>
 1. describe operators precedences?
 
 
-Escape Sequences
+<h2 style="color:purple;">Escape Sequences</h2>
 
 Single character escape sequences
 There are some reserved single character escape sequences for use in strings:
@@ -269,9 +278,11 @@ There are some reserved single character escape sequences for use in strings:
 
 more details: https://www.youtube.com/watch?v=fpRZsVrVrkU
 
-Math Objects
 
-Math Properties (Constants)
+<h2 style="color:purple;">Math Objects</h2>
+
+
+<h3>Math Properties (Constants)</h3>
 
 Math.E        // returns Euler's number
 Math.PI       // returns PI
@@ -370,7 +381,7 @@ Math.log10(x) returns the base 10 logarithm of x. How many times must we multipl
 
 Math.log10(1000);    // returns 3
 
-Js Popup Alert
+<h2 style="color: purple;">Js Popup Alert</h2>
 
 prompt()
 alert()
@@ -379,12 +390,13 @@ num1=3
 num2=5
 
 
-Coding Exercises
+<h2 style="color:orange">Coding Exercises</h2>
 
 Javascript program to perform all arithmetic operations
 Javascript program to find sum and average of two numbers
 Javascript program to find area and perimeter of circle	//area=PI*rad*rad, perm=2*PI*rad;
-Javascript program to convert temperature from  Celsius to Fahrenheit  //fahrenheit = (celsius * 9 / 5) + 32;  //celsius to fahrenheit 
+Javascript program to convert temperature from  Celsius to Fahrenheit  
+//fahrenheit = (celsius * 9 / 5) + 32;  //celsius to fahrenheit 
 
 
 let cel, fah;
@@ -394,8 +406,10 @@ console.log(`${cel} in fahrenheit is: ${fah}`);
 
 
 
-Javascript program to find cube of an integer number using pow() function and Exponentiation (**)
-Javascript prgram to swap two numbers without using a temporary variable and using a temp variable
+Javascript program to find cube of an integer number using pow() function and 
+Exponentiation (**)
+Javascript prgram to swap two numbers without using a temporary variable and 
+using a temp variable
 temp=first
 first=second
 second=temp
@@ -405,10 +419,14 @@ b=a+b
 a=b-a
 
 Javascript program to find square root of any number using sqrt function
-Javascript program to find sum of all numbers from 0 to N without using loop //sum = n*(n+1)/2
-Javascript program to printing value in Decimal, Octal, Hexadecimal, binary // toString()
-Javascript program to print ASCII value of a character // charCodeAt(0)
-Javascript program to generate random numbers between 100 to 1000 //random() * (max - min + 1)) + min
+Javascript program to find sum of all numbers from 0 to N without using loop 
+//sum = n*(n+1)/2
+Javascript program to printing value in Decimal, Octal, Hexadecimal, binary 
+// toString()
+Javascript program to print ASCII value of a character 
+// charCodeAt(0)
+Javascript program to generate random numbers between 100 to 1000 
+//random() * (max - min + 1)) + min
 Javascript program to demonstrate example of escape sequences
 
 console.log("Hello\nWorld!");    //use of \n
@@ -417,23 +435,24 @@ console.log("\n\"Hello World!\"");   //use of \"
 console.log("\nHello\bWorld!");   //use of \b
 
 
-Explore Math functions
+<h3 style="color:red;">Search Content</h3>
 Explore mathjs.org
-https://www.includehelp.com/c-programs/c-programs-bitwise-programs-and-solutions.aspx (we will cover this exercises after finishing conditional statements and loops)
+https://www.includehelp.com/c-programs/c-programs-bitwise-programs-and-solutions.aspx 
+(we will cover this exercises after finishing conditional statements and loops)
 
-Short-Circuiting Of Logical Operators
+<h3>Short-Circuiting Of Logical Operators</h3>
 
 console.log(null || "user"); // user
 console.log("Agnes" || "user"); // Agnes
 
 		
-			Data Types
+<h2 style="color:purple;">Data Types</h2>
 
-	primitives vs non-primitives
+primitives vs non-primitives
 
-Primitive Data Types
+<h3>Primitive Data Types</h3>
 
-String
+<h3>String</h3>
 
 জাভাস্ক্রিপ্টে আমরা তিন ভাবে স্ট্রিং ডিক্লেয়ার করতে পারি। 
 
@@ -458,12 +477,14 @@ String.prototype.length
 let str='Hello';
 console.log(str.length); //5
 
+<h3 style="color:red;">Search Content</h3>
 instanceof
 typeof
 
-Number
+<h3>Number</h3>
 
-Number নামক constructor বা  function এর মধ্যে যদি "121" (যার টাইপ স্ট্রিং) দেওয়া হয় তাহলে Number function এটিকে Number এ কনভার্ট করে ফেলে। Number function এর মধ্যে যাই দেই না কেনো সেটি Number এ কনভার্ট করার চেষ্টা করবে। 
+Number নামক constructor বা  function এর মধ্যে যদি "121" (যার টাইপ স্ট্রিং) দেওয়া হয় তাহলে Number function এটিকে Number এ কনভার্ট করে ফেলে।
+Number function এর মধ্যে যাই দেই না কেনো সেটি Number এ কনভার্ট করার চেষ্টা করবে। 
 
 console.log(Number('123'))  // returns the number 123
 console.log(Number('123') === 123 ) // true
@@ -479,7 +500,7 @@ a instanceof Number;         // is true
 b instanceof Number;   // is false
 
 
-Static properties
+<h4>Static properties</h4>
 
 1. Number.EPSILON
 
@@ -556,7 +577,7 @@ console.log(Number.MAX_VALUE * 2);
 
 
 
-Static methods
+<h4>Static methods</h4>
 
 
 1. Number.isNaN()
@@ -566,7 +587,8 @@ Number.isNaN() মেথডটি দিয়ে চেক করা যায় ক
 if(Number.isNaN(x){
     //if NaN this code will be executed
 }
-x এর ভ্যালু যদি নাম্বার ছাড়া অন্য কিছু হয় তাহলেই শুধু এই কনডিশনটি true হবে। Number.isNaN() হচ্ছে isNaN() এর অল্টারনেটিভ ভার্সন এবং isNaN() এর পরিবর্তে Number.isNaN ব্যবহারের পরামর্শ রইলো। 
+x এর ভ্যালু যদি নাম্বার ছাড়া অন্য কিছু হয় তাহলেই শুধু এই কনডিশনটি true হবে। Number.isNaN() হচ্ছে isNaN() এর অল্টারনেটিভ ভার্সন এবং 
+isNaN() এর পরিবর্তে Number.isNaN ব্যবহারের পরামর্শ রইলো। 
 
 Number.isNaN(123) //false
 Number.isNaN(-1.23) //false
@@ -659,13 +681,14 @@ Number.isSafeInteger(3.0);                  // true
 
 
 
-Instance methods
+<h4>Instance methods</h4>
 
 Number.prototype.toExponential(fractionDigits)
 
 
 
-If you use the toExponential() method for a numeric literal and the numeric literal has no exponent and no decimal point, leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.
+If you use the toExponential() method for a numeric literal and the numeric literal has no exponent and no decimal point, 
+leave whitespace(s) before the dot that precedes the method call to prevent the dot from being interpreted as a decimal point.
 
 var numObj = 77.1234;
 
@@ -774,7 +797,7 @@ console.log(typeof num)     // number
 
 
 
-Boolean
+<h3>Boolean</h3>
 
 নিম্নোক্ত ভ্যালুগুলোর জন্য কনডিশন সর্বদা false আসবে। 
 0, -0, null, false, NaN, undefined, or the empty string ("").
@@ -793,10 +816,10 @@ console.log(s);
 // true
 // true
 
-
+<h3 style="color: red;">Search Content</h3>
 Constructor
 
-1. Boolean()
+<h4>1. Boolean() //Constructor</h4>
 Creates a new Boolean object.
 
 const flag1 = new Boolean(true);
@@ -809,18 +832,60 @@ const flag2 = new Boolean(1);
 console.log(flag2.toString());
 // expected output: "true"
 
+<h4>Truthy</h4>
+In JavaScript, a truthy value is a value that is considered true when encountered in a Boolean context. 
+All values are truthy unless they are defined as falsy (i.e., except for false, 0, -0, 0n, "", null, undefined, and NaN).
 
-null
-undefined
-Symbols (ES6)
+Examples of truthy values in JavaScript (which will be coerced to true in boolean contexts, and thus execute the if block):
+
+if (true)
+if ({})
+if ([])
+if (42)
+if ("0")
+if ("false")
+if (new Date())
+if (-42)
+if (12n)
+if (3.14)
+if (-3.14)
+if (Infinity)
+if (-Infinity)
+
+
+<h4>Falsy</h4>
+A falsy (sometimes written falsey) value is a value that is considered false when encountered in a Boolean context.
+
+
+Complete list of JavaScript falsy values
+
+false	The keyword false.
+0	The Number zero (so, also 0.0, etc., and 0x0).
+-0	The Number negative zero (so, also -0.0, etc., and -0x0).
+0n, -0n	The BigInt zero and negative zero (so, also 0x0n/-0x0n).
+"", '', ``	Empty string value.
+null	null — the absence of any value.
+undefined	undefined — the primitive value.
+NaN	NaN — not a number.
+document.all	Objects are falsy if and only if they have the [[IsHTMLDDA]] internal slot.
+That slot only exists in document.all and cannot be set using JavaScript.
+
+
+<h3>BigInt</h3>
+
+<h3>null</h3>
+
+<h3>undefined</h3>
+
+<h3>Symbols (ES6)</h3>
 
 https://www.programiz.com/javascript/data-types
 
-Empty Values
+<h3>Empty Values</h3>
 
 null and undefined
 
-type conversion
+<h2 style="color:purple;">type conversion</h2>
 
 Automatic Type Conversion
 
@@ -830,7 +895,7 @@ console.log("5"+1); // 51
 console.log("five"*2); // NaN
 console.log(false==0); // true
 
-
+<h3 style="color: red;">Search Content</h3>
 NaN
 
 Weird behaviors of javascript
@@ -838,7 +903,7 @@ Weird behaviors of javascript
 
 
 
-Interview Q:
+<h2 style="color: green;">Interview JS</h2>
 1. what are the falsy values in javascript?
 2. how to check if a value is falsy?
 3. what does 'use strict' do?
@@ -874,6 +939,9 @@ type conversion in javascript
 NaN in javascript
 Weird behaviors of javascript
 
+</pre>
+</body>
+</html>
 
 
 
