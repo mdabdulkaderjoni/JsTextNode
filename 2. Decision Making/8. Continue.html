@@ -4,7 +4,7 @@
 <body>
 <pre style="font-size:17px;">
 
-                                <h2 align="center">continue statement</h2>
+<h2>continue statement</h2>
 
 The continue statement  is used to bring the program control to the beginning of the loop. The continue statement skips 
 some lines of code inside the loop and continues with the next iteration. It is mainly used for a condition so that we can skip some 
@@ -14,50 +14,38 @@ Syntax:
 
 //loop statements  
 continue;  
+
 //some lines of the code which is to be skipped  
 
-<img src="continue.png">
+<img src="./Images/continue.png">
 
 
 Continue statement example 1
 
-#include&lt;stdio.h>  
-void main ()  
-{  
-    int i = 0;   
-    while(i!=10)  
-    {  
-        printf("%d", i);   
+    let i=0;
+
+    while(i!=10){  
+        console.log('i is: ',i)  
         continue;   
         i++;  
     }  
-} 
  
 Output: infinite loop
 
 
 Continue statement example 2
 
-
-#include&lt;stdio.h>  
-int main()
-{  
-    int i=1;//initializing a local variable 
+    let i;
       
     //starting a loop from 1 to 10    
-    for(i=1;i&lt;=10;i++)
-    {      
-        if(i==5)
-        {   //if value of i is equal to 5, it will continue the loop    
+    for(i=1;i&lt;=10;i++){      
+        if(i==5){   //if value of i is equal to 5, it will continue the loop    
             continue;    
         }
     
-        printf("%d \n",i);    
+        console.log('i is: ',i)    
      }//end of for loop    
     
-      return 0;  
-} 
-
    
 Output
 
@@ -74,29 +62,20 @@ Output
 
 As you can see, 5 is not printed on the console because loop is continued at i==5.
 
-<h3>C continue statement with inner loop</h3>
+<h3>continue statement with inner loop</h3>
 
-In such case, C continue statement continues only inner loop, but not outer loop.
-
-#include&lt;stdio.h>  
-int main()
-{  
-    int i=1,j=1;//initializing a local variable    
-    for(i=1;i<=3;i++)
-    {      
-        for(j=1;j<=3;j++)
-        {    
-            if(i==2 && j==2)
-            {    
+In such case, continue statement continues only inner loop, but not outer loop.
+  
+    let i=1,j=1;  
+    for(i=1;i<=3;i++){      
+        for(j=1;j<=3;j++){    
+            if(i==2 && j==2){    
                 continue;//will continue loop of j only    
             }    
-            printf("%d %d\n",i,j);    
+            console.log('i is: '+i+' j is: '+j)  
         }  
   
      }//end of for loop 
-   
-     return 0;  
-} 
 
    
 Output

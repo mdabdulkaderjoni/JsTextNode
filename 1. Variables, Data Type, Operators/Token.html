@@ -199,8 +199,14 @@ Right Shift >>
 
 <h3>Short-Circuiting Of Logical Operators</h3>
 
+precedence is first && and || and associativity is left to right 
+
 console.log(null || "user"); // user
 console.log("Agnes" || "user"); // Agnes
+
+console.log('user' && 'admin'); //admin
+console.log(false && true); //false
+console.log(false || 'admin' && 0); // 0
 
 <h2 style="color:green">Interview JS</h2>
 1. What does the && operator do?
