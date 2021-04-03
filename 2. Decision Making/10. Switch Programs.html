@@ -6,110 +6,65 @@
 <body>
 <pre style="font-size:17px;margin-left:20px;">
 
-<h3>C program to read weekday number and print weekday name using switch.</h3>
+<h3>program to read weekday number and print weekday name using switch.</h3>
 
-
-#include &lt;stdio.h>
- int main()
-{
-    int wDay;
-     
-    printf("Enter weekday number (0-6): ");
-    scanf("%d",&wDay);
+    let wDay=Number(prompt('Enter a number between 0-7'))
      
     switch(wDay)
     {
         case 0: 
-            printf("Sunday");
+            console.log("Sunday");
             break;
         case 1: 
-            printf("Monday");
+            console.log("Monday");
             break;
         case 2: 
-            printf("Tuesday");
+            console.log("Tuesday");
             break;
         case 3: 
-            printf("Wednesday");
+            console.log("Wednesday");
             break;
         case 4: 
-            printf("Thursday");
+            console.log("Thursday");
             break;
         case 5: 
-            printf("Friday");
+            console.log("Friday");
             break;
         case 6: 
-            printf("Saturday");
+            console.log("Saturday");
             break;
         default:
-            printf("Invalid weekday number.");
+            console.log("Invalid weekday number.");
     }
-    printf("\n");
-    return 0;
-}
-
-
-Output
-
-    First Run:
-    Enter weekday number (0-6): 3
-    Wednesday
-
-    Second run:
-    Enter weekday number (0-6): 9
-    Invalid weekday number.  
+   
 
 
 
-<h3>C program to read gender (M/F) and print corresponding gender using switch.</h3>
 
-#include &lt;stdio.h> 
-int main()
-{
-    char gender;
-     
-    printf("Enter gender (M/m or F/f): ");
-    scanf("%c",&gender);
-     
+
+<h3>program to read gender (M/F) and print corresponding gender using switch.</h3>
+
+
+    let gender=String(prompt('Enter a gender M/F'))
     switch(gender)
     {
         case 'M':
         case 'm':
-            printf("Male.");
+            console.log("Male.");
             break;
         case 'F':
         case 'f':
-            printf("Female.");
+            console.log("Female.");
             break;
         default:
-            printf("Unspecified Gender.");
+            console.log("Unspecified Gender.");
     }
-    printf("\n");
-    return 0;
-}
-
-
-Output
-
-    First Run:
-    Enter gender (M/m or F/f): M
-    Male.
-
-    Second Run:
-    Enter gender (M/m or F/f): x
-    Unspecified Gender.
-
+   
 
 <h3>Check VOWEL or CONSONANT program using switch</h3>
 
+    let ch=String(prompt('Enter a character'))    
 
-#include &lt;stdio.h> 
-int main()
-{
-    char ch;
-     
-    printf("Enter a character: ");
-    scanf("%c",&ch);
-     
     //condition to check character is alphabet or not
     if((ch&gt;='A' && ch&lt;='Z') || (ch&gt;='a' && ch&lt;='z'))
     {
@@ -126,52 +81,25 @@ int main()
             case 'i':
             case 'o':
             case 'u':
-                printf("%c is a VOWEL.\n",ch);
+                console.log(`${ch} is vowel`)
                 break;
             default:
-                printf("%c is a CONSONANT.\n",ch);            
+                console.log(`${ch} is consonant`)            
         }
     }
     else
     {
-        printf("%c is not an alphabet.\n",ch);
+        console.log(`${ch} is not an alphabet`)
     }
  
-    return 0;
-}
-Output
-
-    First Run:
-    Enter a character: E  
-    E is a VOWEL.  
- 
-    Second Run:
-    Enter a character: X
-    X is a CONSONANT.
-
-    Third Run:
-    Enter a character: +
-    + is not an alphabet.
-
-
 
 <h3>Calculator program with Basic operations using switch</h3>
 
 
-#include &lt;stdio.h> 
-int main()
-{
-    int num1,num2;
-    float result;
-    char ch;    //to store operator choice
-     
-    printf("Enter first number: ");
-    scanf("%d",&num1);
-    printf("Enter second number: ");
-    scanf("%d",&num2);
-     
-    printf("Choose operation to perform (+,-,*,/,%): ");
-    scanf(" %c",&ch);
+    let num1, num2, result, ch;
+    num1=Number(prompt('Enter a number'))
+    num2=Number(prompt('Enter another number'))
+    ch=prompt('Choose operation to perform (+,-,*,/,%):')
      
     result=0;
     switch(ch)    
@@ -189,89 +117,38 @@ int main()
             break;
              
         case '/':
-            result=(float)num1/(float)num2;
+            result=num1/num2;
             break;
              
         case '%':
             result=num1%num2;
             break;
         default:
-            printf("Invalid operation.\n");
+            console.log("Invalid operation.\n");
     }
+ console.log(`${num1} ${ch} ${num2} is: ${result}`)
+
+
+<h3>program to check whether number is EVEN or ODD using switch.</h3>
  
-    printf("Result: %d %c %d = %f\n",num1,ch,num2,result);
-    return 0;
-}
-
-
-Output
-
-    First run:
-    Enter first number: 10
-    Enter second number: 20 
-    Choose operation to perform (+,-,*,/,%): +
-    Result: 10 + 20 = 30.000000 
-
-    Second run:
-    Enter first number: 10
-    Enter second number: 3
-    Choose operation to perform (+,-,*,/,%): /
-    Result: 10 / 3 = 3.333333 
-
-    Third run:
-    Enter first number: 10
-    Enter second number: 3
-    Choose operation to perform (+,-,*,/,%): >
-    Invalid operation.
-    Result: 10 > 3 = 0.000000 
-
-
-﻿
-<h3>C program to check whether number is EVEN or ODD using switch.</h3>
- 
-#include &lt;stdio.h> 
-int main()
-{
-    int number;
-     
-    printf("Enter a positive integer number: ");
-    scanf("%d",&number);
-     
-    switch(number%2) //this will return either 0 or 1
+   
+    let number=Number(prompt('Enter a number')) 
+    switch(number%2) //this will return either true or false
     {
         case 0:
-            printf("%d is an EVEN number.\n",number);
+            console.log('Even number')
             break;
         case 1:
-            printf("%d is an ODD number.\n",number);
+            console.log('Odd number')
             break;
     }
      
-    return 0;
-}
-
-
-Output
-
-First run:
-Enter a positive integer number: 10 
-10 is an EVEN number. 
-
-Second run:
-Enter a positive integer number: 11 
-11 is an ODD number.
-
-
+   
 <h3>Program to find number of days in a month using C</h3>
 
-#include &lt;stdio.h>
-int main()
-{
-	int month;
-	int days;
-	
-	printf("Enter month: ");
-	scanf("%d",&month);
+
+    let days, month;
+    month=Number(prompt('Enter month number'))
 	
 	switch(month)
 	{
@@ -301,34 +178,78 @@ int main()
 	}
 	
 	if(days)
-		printf("Number of days in %d month is: %d\n",month,days);
+		console.log("Number of days in %d month is: %d\n",month,days);
 	else
-		printf("You have entered an invalid month!!!\n");
+		console.log("You have entered an invalid month!!!\n");
 	
-	return 0;
-	
+
+<h3>A menu-driven program to compute the area of the various geometrical shape
+</h3>
+
+      let choice,r,l,w,b,h;
+      let area;
+    
+      choice=parseInt(prompt('Input 1 for area of circle\n
+                              Input 2 for area of rectangle\n
+                              Input 3 for area of triangle\n'))
+      switch(choice)
+      {
+           case 1:
+                 r=Number(prompt("Input radious of the circle : "));
+            
+                 area=3.14*r*r;
+                 break;
+            case 2:
+                  l=Number(prompt("Input length of the rectangle : "));
+                  w=Number(prompt("Input width of the rectangle : "));
+                  area=l*w;
+                  break;
+            case 3:
+                  
+                  b=Number(prompt("Input base : "));
+                  h=Number(prompt("Input height : "));
+                  area=.5*b*h;
+                  break;
+          }
+          console.log(`Area is: ${area}`)
 }
 
+<h3>Write a program  which is a Menu-Driven Program to perform a simple calculation.</h3>
 
-Output
+        let num1, num2, opt;
 
-First run:
-Enter month: 3
-Number of days in 3 month is: 31
-
-Second run:
-Enter month: 2
-Number of days in 2 month is: 28
-
-Third run:
-Enter month: 11 
-Number of days in 11 month is: 30 
-
-Fourth run:
-Enter month: 13 
-You have entered an invalid month!!!
-
-
+        opt=Number(prompt("1-Addition.\n2-Substraction.\n3-Multiplication.
+                           \n4-Division.\n5-Exit.\n"));
+        switch(opt) {
+          case 1:
+            console.log("The Addition of  \n",num1,num2,num1+num2);
+            break;
+            
+          case 2:
+            console.log("The Substraction ",num1,num2,num1-num2);
+            break;
+            
+          case 3:
+            console.log("The Multiplication ",num1,num2,num1*num2);
+            break;  
+          
+          case 4:
+            if(num2==0) {
+              console.log("The second integer is zero. Devide by zero.\n");
+            } else {
+              console.log("The Division : ",num1,num2,num1/num2);
+            }  
+            break;
+            
+          case 5: 
+            break; 
+            
+          default:
+            console.log("Input correct option\n");
+            break; 
+        }
+    
+    
 
 </pre>
 </body>

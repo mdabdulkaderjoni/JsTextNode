@@ -4,8 +4,8 @@
 </head>
 <body>
 <pre style="font-size:17px;margin-left:5px;">
+<h3> Conditional operator ‘?’</h3>
 
-    Conditional operator ‘?’
 Sometimes, we need to assign a variable depending on a condition.
 
 For instance:
@@ -20,27 +20,35 @@ if (age > 18) {
 }
 
 alert(accessAllowed);
+
+
 The so-called “conditional” or “question mark” operator lets us do that in a shorter and simpler way.
 
-The operator is represented by a question mark ?. Sometimes it’s called “ternary”, because the operator has three operands. It is actually the one and only operator in JavaScript which has that many.
+<mark>The operator is represented by a question mark ?. Sometimes it’s called “ternary”, because the operator has three operands.</mark>
+It is actually the one and only operator in JavaScript which has that many.
 
 The syntax is:
 
 let result = condition ? value1 : value2;
 The condition is evaluated: if it’s truthy then value1 is returned, otherwise – value2.
 
+<img src="./Images/ternay.jpg" height="400px" width="500px" alt="">
 For example:
 
 let accessAllowed = (age > 18) ? true : false;
-Technically, we can omit the parentheses around age > 18. The question mark operator has a low precedence, so it executes after the comparison >.
+
+Technically, we can omit the parentheses around age > 18. 
+<mark>The question mark operator has a low precedence, so it executes after the comparison >.</mark>
 
 This example will do the same thing as the previous one:
 
 // the comparison operator "age > 18" executes first anyway
 // (no need to wrap it into parentheses)
-let accessAllowed = age > 18 ? true : false;
-But parentheses make the code more readable, so we recommend using them.
 
+let accessAllowed = age > 18 ? true : false;
+
+<mark>But parentheses make the code more readable, so we recommend using them.
+</mark>
 Please note:
 In the example above, you can avoid using the question mark operator because the comparison itself returns true/false:
 
@@ -59,12 +67,16 @@ let message = (age < 3) ? 'Hi, baby!' :
   'What an unusual age!';
 
 alert( message );
+
+<img src="./Images/ternay2.jpg" height="400px" width="500px" alt="">
 It may be difficult at first to grasp what’s going on. But after a closer look, we can see that it’s just an ordinary sequence of tests:
 
 The first question mark checks whether age < 3.
 If true – it returns 'Hi, baby!'. Otherwise, it continues to the expression after the colon ‘":"’, checking age < 18.
 If that’s true – it returns 'Hello!'. Otherwise, it continues to the expression after the next colon ‘":"’, checking age < 100.
-If that’s true – it returns 'Greetings!'. Otherwise, it continues to the expression after the last colon ‘":"’, returning 'What an unusual age!'.
+If that’s true – it returns 'Greetings!'. Otherwise, it continues to the expression after the last colon ‘":"’, 
+returning 'What an unusual age!'.
+
 Here’s how this looks using if..else:
 
 if (age < 3) {
@@ -76,18 +88,19 @@ if (age < 3) {
 } else {
   message = 'What an unusual age!';
 }
-Non-traditional use of ‘?’
+
+<h3>Non-traditional use of ‘?’</h3>
 Sometimes the question mark ? is used as a replacement for if:
 
 let company = prompt('Which company created JavaScript?', '');
-
 (company == 'Netscape') ?
    alert('Right!') : alert('Wrong.');
+
 Depending on the condition company == 'Netscape', either the first or the second expression after the ? gets executed and shows an alert.
 
-We don’t assign a result to a variable here. Instead, we execute different code depending on the condition.
+<mark>We don’t assign a result to a variable here. Instead, we execute different code depending on the condition.</mark>
 
-It’s not recommended to use the question mark operator in this way.
+<p style="color: red;">It’s not recommended to use the question mark operator in this way.</p>
 
 The notation is shorter than the equivalent if statement, which appeals to some programmers. But it is less readable.
 
@@ -102,10 +115,47 @@ if (company == 'Netscape') {
 }
 Our eyes scan the code vertically. Code blocks which span several lines are easier to understand than a long, horizontal instruction set.
 
-The purpose of the question mark operator ? is to return one value or another depending on its condition. Please use it for exactly that. Use if when you need to execute different branches of code.
+The purpose of the question mark operator ? is to return one value or another depending on its condition. 
+Please use it for exactly that. Use if when you need to execute different branches of code.
 
+<h3>Nested ternary operators</h3>
+You can also nest one ternary operator as an expression inside another ternary operator. For example,
 
+// program to check if number is positive, negative or zero
+let a = 3;
+let result = (a >= 0) ? (a == 0 ? "zero" : "positive") : "negative";
+console.log(`The number is ${result}.`);
 
+Output: The number is positive.
+ 
+
+<b>Note:</b> You should try to avoid nested ternary operators whenever possible as they make your code hard to read.
+
+<h3>Predict the output of below programs</h3>
+let x;
+x = 5 > 8 ? 10 : 1 != 2 < 5 ? 20 : 30;
+console.log('X is: ',x)
+
+let x;
+x = 5 < 8 ? 1 != 2 < 5 == 0 ? 10 : 20 : 30;
+console.log('X is: ',x)
+
+let x;
+x = 2 > 5 != 1 ? 5 < 8 && 8 > 2 ? !5 ? 10 : 20 : 30 : 40;
+console.log('X is: ',x)
+
+let x;
+x = 2 > 5 ? 1 != 2 > 5 ? 10 : 20 : 5 < 8 ? 2 != 2 > 5 ?
+    !5 ? 30 : !1 != 1 ? 40 : 50 : 60 : 70;
+
+console.log('X is: ',x)
+
+<h3>n this Program we have used the conditional operator for comparing biggest of three numbers.</h3>
+let a=12, b=33, c=44, 
+big ;
+
+big = a > b ? (a > c ? a : c) : (b > c ? b : c) ;
+console.log('Big is: ',big)
 </pre>
 </body>
 </html>
