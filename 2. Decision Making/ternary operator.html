@@ -61,9 +61,9 @@ For instance:
 
 let age = prompt('age?', 18);
 
-let message = (age < 3) ? 'Hi, baby!' :
-  (age < 18) ? 'Hello!' :
-  (age < 100) ? 'Greetings!' :
+let message = (age &lt; 3) ? 'Hi, baby!' :
+  (age &lt; 18) ? 'Hello!' :
+  (age &lt; 100) ? 'Greetings!' :
   'What an unusual age!';
 
 alert( message );
@@ -71,19 +71,19 @@ alert( message );
 <img src="./Images/ternay2.jpg" height="400px" width="500px" alt="">
 It may be difficult at first to grasp what’s going on. But after a closer look, we can see that it’s just an ordinary sequence of tests:
 
-The first question mark checks whether age < 3.
-If true – it returns 'Hi, baby!'. Otherwise, it continues to the expression after the colon ‘":"’, checking age < 18.
-If that’s true – it returns 'Hello!'. Otherwise, it continues to the expression after the next colon ‘":"’, checking age < 100.
+The first question mark checks whether age &lt; 3.
+If true – it returns 'Hi, baby!'. Otherwise, it continues to the expression after the colon ‘":"’, checking age &lt; 18.
+If that’s true – it returns 'Hello!'. Otherwise, it continues to the expression after the next colon ‘":"’, checking age &lt; 100.
 If that’s true – it returns 'Greetings!'. Otherwise, it continues to the expression after the last colon ‘":"’, 
 returning 'What an unusual age!'.
 
 Here’s how this looks using if..else:
 
-if (age < 3) {
+if (age &lt; 3) {
   message = 'Hi, baby!';
-} else if (age < 18) {
+} else if (age &lt; 18) {
   message = 'Hello!';
-} else if (age < 100) {
+} else if (age &lt; 100) {
   message = 'Greetings!';
 } else {
   message = 'What an unusual age!';
@@ -133,29 +133,33 @@ Output: The number is positive.
 
 <h3>Predict the output of below programs</h3>
 let x;
-x = 5 > 8 ? 10 : 1 != 2 < 5 ? 20 : 30;
+x = 5 > 8 ? 10 : 1 != 2 &lt; 5 ? 20 : 30;
 console.log('X is: ',x)
 
 let x;
-x = 5 < 8 ? 1 != 2 < 5 == 0 ? 10 : 20 : 30;
+x = 5 &lt; 8 ? 1 != 2 &lt; 5 == 0 ? 10 : 20 : 30;
 console.log('X is: ',x)
 
 let x;
-x = 2 > 5 != 1 ? 5 < 8 && 8 > 2 ? !5 ? 10 : 20 : 30 : 40;
+x = 2 > 5 != 1 ? 5 &lt; 8 && 8 > 2 ? !5 ? 10 : 20 : 30 : 40;
 console.log('X is: ',x)
 
 let x;
-x = 2 > 5 ? 1 != 2 > 5 ? 10 : 20 : 5 < 8 ? 2 != 2 > 5 ?
+x = 2 > 5 ? 1 != 2 > 5 ? 10 : 20 : 5 &lt; 8 ? 2 != 2 > 5 ?
     !5 ? 30 : !1 != 1 ? 40 : 50 : 60 : 70;
 
 console.log('X is: ',x)
 
 <h3>n this Program we have used the conditional operator for comparing biggest of three numbers.</h3>
 let a=12, b=33, c=44, 
-big ;
+big, small ;
+
+small=(a&lt;b? (a&lt;c?a:c) : (b&lt;c?b:c)
+console.log('Small is: ',small);
 
 big = a > b ? (a > c ? a : c) : (b > c ? b : c) ;
 console.log('Big is: ',big)
+
 </pre>
 </body>
 </html>

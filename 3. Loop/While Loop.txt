@@ -1,0 +1,109 @@
+C – while loop
+Syntax of while loop:
+
+while (condition test)
+{
+      //Statements to be executed repeatedly 
+      // Increment (++) or Decrement (--) Operation
+}
+Flow Diagram of while loop
+C while loop
+
+Example of while loop
+#include <stdio.h>
+int main()
+{
+   int count=1;
+   while (count <= 4)
+   {
+	printf("%d ", count);
+	count++;
+   }
+   return 0;
+}
+Output:
+
+
+1 2 3 4
+step1: The variable count is initialized with value 1 and then it has been tested for the condition.
+step2: If the condition returns true then the statements inside the body of while loop are executed else control comes out of the loop.
+step3: The value of count is incremented using ++ operator then it has been tested again for the loop condition.
+
+Guess the output of this while loop
+
+#include <stdio.h>
+int main()
+{
+     int var=1;
+     while (var <=2)
+     {
+        printf("%d ", var);
+     }
+}
+The program is an example of infinite while loop. Since the value of the variable var is same (there is no ++ or – operator used on this variable, inside the body of loop) the condition var<=2 will be true forever and the loop would never terminate.
+
+Examples of infinite while loop
+Example 1:
+
+#include <stdio.h>
+int main()
+{
+     int var = 6;
+     while (var >=5)
+     {
+        printf("%d", var);
+        var++;
+     }
+   return 0;
+}
+Infinite loop: var will always have value >=5 so the loop would never end.
+
+Example 2:
+
+#include <stdio.h>
+int main()
+{
+    int var =5;
+    while (var <=10)
+    {
+       printf("%d", var);
+       var--;
+    }
+    return 0;
+}
+Infinite loop: var value will keep decreasing because of –- operator, hence it will always be <= 10.
+
+Use of Logical operators in while loop
+Just like relational operators (<, >, >=, <=, ! =, ==), we can also use logical operators in while loop. The following scenarios are valid :
+
+while(num1<=10 && num2<=10)
+-using AND(&&) operator, which means both the conditions should be true.
+
+while(num1<=10||num2<=10)
+– OR(||) operator, this loop will run until both conditions return false.
+
+while(num1!=num2 &&num1 <=num2)
+– Here we are using two logical operators NOT (!) and AND(&&).
+
+while(num1!=10 ||num2>=num1)
+Example of while loop using logical operator
+In this example we are testing multiple conditions using logical operator inside while loop.
+
+#include <stdio.h>
+int main()
+{
+   int i=1, j=1;
+   while (i <= 4 || j <= 3)
+   {
+	printf("%d %d\n",i, j);
+	i++;
+	j++;
+   }
+   return 0;
+}
+Output:
+
+1 1
+2 2
+3 3
+4 4

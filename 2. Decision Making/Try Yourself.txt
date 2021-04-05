@@ -1,0 +1,99 @@
+1. Food order system menu bar and calculate prices
+
+demo:
+
+choose your food
+1. Burger 180 tk
+2. Pizza  250 tk
+3. Shawrma 120 tk
+4. Drinks 80 tk
+
+pressed 2:
+
+how many burgers?
+
+pressed 2
+
+Final ouput: Total is 500 tk
+
+
+2. decorate notes of money 
+
+demo:
+
+Notes are in 10, 20, 50, 100, 200, 500, 1000 
+please enter an positive number as money between 1 to 1000
+
+entered 740
+
+Final output: 200*2+20*2
+
+500*1+200*1+20*2;
+
+
+3. Given an integer, n, perform the following conditional actions:
+
+
+If n is odd, print Weird
+If n is even and in the inclusive range of 2 to 5, print Not Weird
+If n is even and in the inclusive range of 6 to 20, print Weird
+If n is even and greater than 20, print Not Weird
+Input Format:
+A single line containing a positive integer, n.
+Constraints:
+n lies between 1 and 100
+
+Input:
+17
+
+Output:
+Weird
+
+4. you must solve this problem only using switch case // hints: try nested switch case
+
+Find the largest number among there numbers
+
+demo:
+
+enter first number
+user entered: 33
+enter second number
+user entered: 44
+enter third number
+user entered: 11
+
+final output: 44 is largest
+
+5. you can use if else where necessary but switch case is must
+   and also must use charCodeAt() function
+   there is a code given below, you can change add remove case and other codes
+   but for loop will remain as it is
+
+
+demo: 
+
+enter a string of 5 letters
+
+user entered Hello
+
+final output: 2 vowels found and they are e and o
+
+
+
+hints: 
+
+let i,  str='Hello';
+// console.log(str.charCodeAt(0)); // H = 72 at 0
+// console.log(str.charCodeAt(1)); // e = 101 at 1
+// console.log(str.charCodeAt(2)); // l = 108 at 2
+// console.log(str.charCodeAt(3)); // l = 108 at 3
+// console.log(str.charCodeAt(4)); // H = 111 at 4
+
+for(i=0;i<str.length;i++){
+
+
+  switch(str.charCodeAt(i)){
+   
+   
+  }
+}
