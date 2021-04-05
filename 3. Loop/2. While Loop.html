@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>while loop</title>
+   <style>
+      .box{
+         box-shadow: 0 0 1em gray;
+         display: inline-block;
+         padding:15px;
+         color:white;
+         background-color: rgb(44, 37, 37);
+      }
+   </style>
+</head>
+<body>
+   <pre style="font-size: 18px;">
+   <h2 style="color: green;"> while loop</h2>
+Syntax of while loop:
+<h3>
+while (condition test)
+{
+      //Statements to be executed repeatedly 
+      // Increment (++) or Decrement (--) Operation
+}
+</h3>
+
+Flow Diagram of while loop
+<img src="./while1.jpg" alt="">
+
+
+   let count=1;
+   while (count &lt;= 4)
+   {
+	    console.log(count);
+       count++;
+   }
+
+Output:  1 2 3 4
+
+step1: The variable count is initialized with value 1 and then it has been tested for the condition.
+
+step2: If the condition returns true then the statements inside the body of while loop are executed else control comes out of the loop.
+
+step3: The value of count is incremented using ++ operator then it has been tested again for the loop condition.
+
+Guess the output of this while loop
+
+     let i=1;
+     while (i &lt;=2)
+     {
+        console.log(i)
+     }
+}
+
+The program is an example of infinite while loop. Since the value of the variable i is same 
+(there is no ++ or – operator used on this variable, inside the body of loop) 
+the condition var&lt;=2 will be true forever and the loop would never terminate.
+
+<h3>Examples of infinite while loop</h3>
+
+Example 1:
+
+     let var = 6;
+     while (var >=5)
+     {
+        console.log(var);
+        var++;
+     }
+
+Infinite loop: var will always have value >=5 so the loop would never end.
+
+Example 2:
+
+    let var =5;
+    while (var &lt;=10)
+    {
+       console.log(var)
+       var--;
+    }
+
+Infinite loop: var value will keep decreasing because of –- operator, hence it will always be &lt;= 10.
+
+<h3>Use of Logical operators in while loop</h3>
+
+Just like relational operators (&lt;, >, >=, &lt;=, ! =, ==), we can also use logical operators in while loop. 
+The following scenarios are valid :
+
+while(num1&lt;=10 && num2&lt;=10)
+-using AND(&&) operator, which means both the conditions should be true.
+
+while(num1&lt;=10||num2&lt;=10)
+– OR(||) operator, this loop will run until both conditions return false.
+
+while(num1!=num2 &&num1 &lt;=num2)
+– Here we are using two logical operators NOT (!) and AND(&&).
+
+while(num1!=10 ||num2>=num1)
+Example of while loop using logical operator
+In this example we are testing multiple conditions using logical operator inside while loop.
+
+
+   let i=1, j=1;
+   while (i &lt;= 4 || j &lt;= 3)
+   {
+	    console.log('i is: '+i+' and j is: '+j)
+	    i++;
+	    j++;
+   }
+
+Output:
+
+1 1
+2 2
+3 3
+4 4
+
+
+<h2 style="color: orangered;">Exercises of while loop</h2>
+
+<h3>print 1 to N numbers</h3>
+
+<div class="box">
+let i=0, N;
+N=parseInt(prompt('Enter an integer'));
+
+while(i&lt;=N){
+   console.log(i);
+   i=i+1;
+}
+console.log(i);
+</div>
+
+<h3>Write a program to calculate the sum of first 10 numbers</h3>
+
+<div class="box">
+   let i=0;sum=0;
+
+   while(i&lt;=10){
+      sum=sum+1; // as sum+=1
+      i=i+1; // as i++
+      console.log(``) //show every step happening here inside loop 
+   }
+   console.log('Sum is: '+sum);
+</div>
+
+<h3>print 20 horizontal asterisks (*) </h3>
+
+<div class="box">
+   let i=0;
+
+   while(i&lt;=19){
+      console.log('*');
+   }
+   console.log('value ofi: '+i);
+</div>
+
+<h3>write a program to calculate the sum of numbers from M to N</h3>
+
+<div class="box">
+   let M,N, sum=0;
+   M=parseInt(prompt('Enter starting point'));
+   N=parseInt(prompt('Enter ending point'));
+   
+   while(M&lt;=N){
+      sum=sum+M;
+      M=M+1;
+   }
+   console.log('sum is: '+sum);
+</div>
+
+<h3>write a program to display the largest of 6 numbers using ternay operator</h3>
+
+<div class="box">
+   let i = 0, large = -111, num;
+
+   while(i&lt;=5){
+      num=Number(prompt('Enter a number'));
+      large=num>large? num:large;
+   }
+   console.log('largest number is: '+large);
+</div>
+
+<h3>write a program to read the numbers until -1 is encountered. Also count the negative, positive and zeros</h3>
+
+<div class="box">
+   let num, negatives=0, positives=0, zero=0;
+   num=parseInt(prompt('Enter -1 to exit\nEnter a number'))
+
+   while(num!=-1){
+
+      if(num>0){
+         positives++;
+      }
+      else if(num&lt;0){
+         negatives++;
+      }
+      else{
+         zeros++;
+      }
+
+      num=parseInt(prompt('Enter -1 to exit\nEnter a number'))
+   }
+   console.log(``);
+</div>
+
+<h3>write a program to calculate the average of numbers entered by the user</h3>
+
+   </pre>
+</body>
+</html>

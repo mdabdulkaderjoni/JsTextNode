@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>for loop</title>
+</head>
+<body>
+   <pre style="font-size: 18px;">
+      
+    <h2 style="color: green;">For loop</h2>
+
+This is one of the most frequently used loop in programming.
+Syntax of for loop:
+
+<h3>
+for (initialization; condition test; increment or decrement)
+{
+       //Statements to be executed repeatedly
+}</h3>
+
+Flow Diagram of For loop
+<img src="./for1.JPG" alt="">
+
+Step 1: First initialization happens and the counter variable gets initialized.
+
+Step 2: In the second step the condition is checked, where the counter variable is tested for the given condition, 
+if the condition returns true then the C statements inside the body of for loop gets executed, 
+if the condition returns false then the for loop gets terminated and the control comes out of the loop.
+
+Step 3: After successful execution of statements inside the body of loop, the counter variable is incremented or decremented, 
+depending on the operation (++ or –).
+
+Example of For loop
+
+   let i;
+   for (i=1; i&lt;=3; i++)
+   {
+       console.log(i);
+   }
+
+Output:
+
+1
+2
+3
+
+<h2 style="color:green;">Various forms of for loop</h2>
+
+I am using variable num as the counter in all the following examples –
+
+1) Here instead of num++, I’m using num=num+1 which is same as num++.
+
+for (num=10; num&lt;20; num=num+1)
+
+2) Initialization part can be skipped from loop as shown below, the counter variable is declared before the loop.
+
+let num=10;
+for ( ; num&lt;20; num++)
+
+Note: Even though we can skip initialization part but semicolon (;) before condition is must,
+without which you will get compilation error.
+3) Like initialization, you can also skip the increment part as we did below. In this case semicolon (;) is must after condition logic.
+In this case the increment or decrement part is done inside the loop.
+
+for (num=10; num&lt;20; )
+{
+      //Statements
+      num++;
+}
+
+
+4) This is also possible. The counter variable is initialized before the loop and incremented inside the loop.
+
+int num=10;
+for ( ; num&lt;20; )
+{
+      //Statements
+      num++;
+}
+
+5) As mentioned above, the counter variable can be decremented as well. In the below example 
+the variable gets decremented each time the loop runs until the condition num>10 returns false.
+
+for(num=20; num>10; num--)
+
+
+<h2>Nested For Loop</h2>
+
+Nesting of loop is also possible. Lets take an example to understand this:
+
+
+   for (int i=0; i&lt;2; i++)
+   {
+	    for (int j=0; j&lt;4; j++)
+	    {
+	        console.log(i+', '+j);
+	    }
+   }
+
+Output:
+
+0, 0
+0, 1
+0, 2
+0, 3
+1, 0
+1, 1
+1, 2
+1, 3
+
+In the above example we have a for loop inside another for loop, this is called nesting of loops. 
+<h4>One of the example where we use nested for loop is Two dimensional array.</h4>
+
+<h2>Multiple initialization inside for Loop</h2>
+
+We can have multiple initialization in the for loop as shown below.
+
+for (i=1,j=1; i&lt;10 && j&lt;10;  i++, j++)
+
+<h3>What’s the difference between above for loop and a simple for loop?</h3>
+
+1. It is initializing two variables. Note: both are separated by comma (,).
+
+2. It has two test conditions joined together using AND (&&) logical operator. 
+<h4 style="color:red;">Note: You cannot use multiple test conditions separated by comma, you must use logical operator such as && or || to join conditions.</h4>
+
+3. It has two variables in increment part. Note: Should be separated by comma.
+
+Example of for loop with multiple test conditions
+
+   let i,j;
+   for (i=1,j=1 ; i&lt;3 || j&lt;5; i++,j++)
+   {
+	    console.log(i, j);
+   }
+  </pre>
+   
+</body>
+</html>

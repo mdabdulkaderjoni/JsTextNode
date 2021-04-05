@@ -4,22 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Loop</title>
 </head>
 <body>
   <pre style="font-size: 17px;">
-    <h2>for statement</h2>
-    <img src="./for1.JPG" alt="">
+   <h2>What is Loop</h2>
 
-    A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop.
+   A loop is used for executing a block of statements repeatedly until a given condition returns false.
     
-    A for statement looks as follows:
-    <h3>
-    for ([initialExpression]; [conditionExpression]; [incrementExpression]){
-      statement
-    }</h3>
     
-    <h2>while statement</h2>
+    <h2 style="color: green;">while statement</h2>
     <img src="./while1.jpg" alt="">
     
     A while statement executes its statements as long as a specified condition evaluates to true. 
@@ -27,11 +21,26 @@
   <h3>  
     while (condition){
 
-        statement
+        statements
+        increments/decrements
 
     }
     </h3>
-    <h2>do...while statement</h2>
+
+    <h2 style="color:green">for statement</h2>
+    <img src="./for1.JPG" alt="">
+
+    A for loop repeats until a specified condition evaluates to false. The JavaScript for loop is similar to the Java and C for loop.
+    
+    A for statement looks as follows:
+    <h3>
+    for ([initialExpression]; [conditionExpression]; [incrementExpression]){
+
+        statements
+    }</h3>
+
+
+    <h2 style="color:green;">do...while statement</h2>
     <img src="./do-while.jpg" alt="">
     
     The do...while statement repeats until a specified condition evaluates to false.
@@ -40,7 +49,8 @@
     <h3>
     do{
 
-      statement
+      statements
+      increments/decrements
 
     }while (condition);</h3>
     
@@ -49,13 +59,14 @@
     
     
     
-    Infinite Loop 
+    <h2 style="color: red;">Infinite Loop (pre-requirements: exercises of loops)</h2>
     
-    What is infinite loop?
+    <h3>What is infinite loop?</h3>
     
-    An infinite loop is a looping construct that does not terminate the loop and executes the loop forever. It is also called an indefinite loop or an endless loop. It either produces a continuous output or no output.
+    An infinite loop is a looping construct that does not terminate the loop and executes the loop forever. 
+    It is also called an indefinite loop or an endless loop. It either produces a continuous output or no output.
     
-    When to use an infinite loop
+    <h3>When to use an infinite loop</h3>
     
     An infinite loop is useful for those applications that accept the user input and generate the output continuously until 
     the user exits from the application manually. In the following situations, this type of loop can be used:
@@ -69,18 +80,19 @@
     All the games also run in an infinite loop. The game will accept the user requests until the user exits from the game.
     We can create an infinite loop through various loop structures. 
     The following are the loop structures through which we will define the infinite loop:
-    
-    
+     
     for loop
     while loop
     do-while loop
     
-    Let's see the infinite 'for' loop. The following is the definition for the infinite for loop:
+    <h3>for infinite loop</h3>
     
-    for(; ;)  
-    {  
-        // body of the for loop.  
-    }  
+    <h3>
+      for(; ;)  
+      {  
+          // body of the for loop.  
+      } 
+    </h3> 
     As we know that all the parts of the 'for' loop are optional, and in the above for loop, 
     we have not mentioned any condition; so, this loop will execute infinite times.
     
@@ -93,18 +105,19 @@
      
     In the above code, we run the 'for' loop infinite times, so "Hello javatpoint" will be displayed infinitely.
     
+     
     
     
-    Infinite Loop
-    
-    while loop
+    <h3>while infinite loop</h3>
     
     Now, we will see how to create an infinite loop using a while loop. The following is the definition for the infinite while loop:
     
-    while(1)  
-    {  
-       // body of the loop..  
-    } 
+    <h3>
+      while(1)  
+      {  
+          // body of the loop..  
+      } 
+    </h3>
      
     In the above while loop, we put '1' inside the loop condition. As we know that any non-zero integer represents the true condition 
     while '0' represents the false condition.
@@ -121,45 +134,32 @@
     In the above code, we have defined a while loop, which runs infinite times as it does not contain any condition. 
     The value of 'i' will be updated an infinite number of times.
     
+  
     
-    Infinite Loop 
-    
-    do..while loop
+    <h3>do..while infinite loop</h3>
     
     The do..while loop can also be used to create the infinite loop. The following is the syntax to create the infinite do..while loop.
     
-    do  
-    {  
-        // body of the loop..  
-    }while(1);  
+    <h3>
+      do  
+      {  
+         // body of the loop..  
+      }while(1);  
+    </h3>
     
     
     The above do..while loop represents the infinite condition as we provide the '1' value inside the loop condition. 
     As we already know that non-zero integer represents the true condition, so this loop will run infinite times.
     
     
-    Infinite Loop
+    <h3>How to break infinite loop </h3>
     
     Till now, we have seen various ways to define an infinite loop. However, we need some approach to come out of the infinite loop. 
     In order to come out of the infinite loop, we can use the break statement.
     
     Let's understand through an example.
-    
-    #include <stdio.h>  
-    int main()  
-    {  
-     char ch;  
-     while(1)  
-     {  
-         ch=getchar();  
-         if(ch=='n')  
-         {  
-             break;  
-         }  
-         printf("hello");  
-     }  
-     return 0;  
-    }  
+
+     
     
     let password;
     while(1){
@@ -174,7 +174,7 @@
     We have added the 'if' statement inside the while loop. The 'if' statement contains the break keyword, 
     and the break keyword brings control out of the loop.
     
-    Unintentional infinite loops
+    <h3>Unintentional infinite loops</h3>
     
     Sometimes the situation arises where unintentional infinite loops occur due to the bug in the code. If we are the beginners, 
     then it becomes very difficult to trace them. Below are some measures to trace an unintentional infinite loop:
