@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>setInterval/clearInterval example</title>
+  <style>
+    body {
+      font-family: Verdana;
+      margin: 50px 100px;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background-color: green;
+      font-size: 18px;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-stop {
+      background-color: #133337;
+    }
+  </style>
+
+
+</head>
+
+<!-- <body onload="changeColor();"> -->
+
+<body>
+
+  <button onclick="stopTextColor();" class='btn-stop'>Stop</button>
+  <button onclick="startTextColor();">Start</button>
+
+
+
+
+  <script>
+
+    let i = 0;
+    let nIntervId;
+
+    function changeColor() {
+      nIntervId = setInterval(flashText, 1000);
+    }
+    changeColor()
+
+    function flashText() {
+
+      let colors = [
+        'red',
+        'blue',
+        'orange',
+        "Black",
+        "BlanchedAlmond",
+        "BlueViolet",
+        "Brown",
+        "BurlyWood",
+        "CadetBlue",
+        "Chartreuse",
+        "Chocolate",
+        "Coral",
+        "CornflowerBlue",
+        "Cornsilk",
+        "Crimson",
+        "Cyan",
+        "Gainsboro",
+        "GhostWhite",
+        "Gold",
+        "GoldenRod"]
+
+      //   while(true){
+      //       document.body.style.backgroundColor=colors[i]
+      //       i++; //i=3;
+
+      //       if(i==colors.length){
+      //          i=0;
+      //       }
+      //   break;
+
+      // }
+      document.body.style.backgroundColor = colors[i]
+      i++;
+      if (i == colors.length) {
+        i = 0;
+      }
+
+    }
+
+
+    function stopTextColor() {
+      clearInterval(nIntervId);
+    }
+    function startTextColor() {
+      clearInterval(nIntervId);
+      changeColor()
+
+    }
+
+
+  </script>
+</body>
+
+</html>

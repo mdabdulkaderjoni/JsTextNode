@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Execution Time</title>
+</head>
+<body>
+<pre style="font-size: 18px;">
+    <h2>How to measure execution time of a method in JavaScript</h2>
+
+Measuring the execution times of a code snippet can be essential as a form of debugging, 
+especially when some other component is time-dependent on that piece of code for its execution (e.g. animations).
+
+    <h3>1. performance.now()</h3>
+The performance.now() method returns the time elapsed since the time origin, measured in milliseconds. It returns timestamp up to 
+microsecond precision. The following example demonstrates the usage of performance.now() method to track execution time of an operation
+
+
+//const { JSDOM } = require("jsdom");
+//const { window } = new JSDOM();
+ 
+var start = window.performance.now();
+ 
+// task starts
+for (var i = 0; i &lt; 100000000;i++);
+// task ends
+ 
+var end = window.performance.now();
+console.log(`Execution time: ${end - start} ms`);
+ 
+Alternatively, 
+you can use the performance.now() method from Performance Timing API which is the same as implemented in modern Web browsers.
+
+
+const {performance} = require('perf_hooks');
+ 
+var start = performance.now();
+ 
+// task starts
+for (var i = 0; i &lt; 100000000;i++);
+// task ends
+ 
+var end = performance.now();
+console.log(`Execution time: ${end - start} ms`);
+ 
+
+<h3>2. Console.time()</h3>
+
+The console.timeEnd() method starts a timer with the specified label. Subsequent call to the console.timeEnd() method with same label 
+will output milliseconds elapsed since the first call was made.
+
+console.time('Execution Time');
+ 
+// task starts
+for (var i = 0; i &lt; 100000000;i++);
+// task ends
+ 
+console.timeEnd('Execution Time');
+
+
+let time = "";
+
+//start
+console.time('time');
+//loop
+for(let i=1; i&lt;= 1e6; i++)
+    time+=i;
+//end
+console.timeEnd('time');
+
+
+There is nothing new in this code — only the start time was replaced by console.time(“”) and the end time was replaced by 
+console.timeEnd(), which indicates the end of the time calculation. It automatically console.log()s the timings and we don’t have to 
+do any extra calculations. Handy as it is, it is only supported on modern browsers. These methods help us in a way but won’t get us 
+too far, as they are not as precise as they claim to be. Granted, console.time is better than Date().getTime(), but it still does not 
+make the cut. For high-precision timing calculations, there is a different API called the Performance interface, 
+which again is implemented by mostly all of the modern browsers.
+ 
+
+<h3>3. Date Object</h3>
+
+Another plausible way to track how long an operation took is to use the Date.now() method which returns the number of milliseconds 
+elapsed since the Unix Epoch. This is demonstrated below:
+
+
+var start =  Date.now();
+ 
+// task starts
+for (var i = 0; i &lt; 100000000;i++);
+// task ends
+ 
+var end =  Date.now();
+console.log(`Execution time: ${end - start} ms`);
+ 
+Alternatively, you can use the unary plus to convert the given date returned by Date constructor into milliseconds.
+
+
+var start = +new Date();
+ 
+// task starts
+for (var i = 0; i &lt; 100000000;i++);
+// task ends
+ 
+var end = +new Date();
+console.log(`Execution time: ${end - start} ms`);
+
+<h4>with getTime() method</h4>
+let time = "";
+
+//start
+let start = new Date().getTime();
+//Code whose execution time is to be measured
+for(let i=1; i&lt;= 1e6; i++)
+    time+=i;
+//Finish
+
+let end=new Date().getTime();
+//The difference is the output
+console.log(end-start);
+
+The code above notes the starting time just before the start of the loop. The loop runs for 1 million (1e6==1000000) iterations and 
+executes a simple addition task. After the loop, we record the time again, this time calling it the end time. The difference of the 
+start and the end gives us the time elapsed while running the loop. I got the result as 165 on my machine. On your machine, 
+it might be different. Though simple, it is frankly not very accurate. That’s why we have console.log(time).
+</pre>  
+</body>
+</html>

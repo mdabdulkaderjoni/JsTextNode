@@ -28,7 +28,7 @@ while (condition test)
 </h3>
 
 Flow Diagram of while loop
-<img src="./while1.jpg" alt="">
+<img src="./Images/while1.jpg" alt="">
 
 
    let count=1;
@@ -209,6 +209,145 @@ console.log(i);
 </div>
 
 <h3>write a program to calculate the average of numbers entered by the user</h3>
+
+<h2 style="color: green;">Nested While Loop</h2>
+In programming language, while loop inside another while loop is known as nested while loop. 
+In nested while loop one or more statements can be included in the body of the loop.
+
+The syntax of nested while
+<h3>
+    while(test_expression)
+    {
+            statements;
+
+            while(test_expression)
+            {
+                statements;
+            }
+    }
+</h3>
+
+flow diagram of the nested while loop
+<img src="./Images/nestedWhile.jpg" alt="">
+
+Initially, Outer while loop executes only once. outer while loop evaluates the test expression. When the condition is false, 
+The flow of control skips the execution and flow of control come out the outer loop for rest when the condition is true, 
+the flow of control jumps to the inner while loop.
+
+
+ 
+Then, test expression evaluates the condition of the inner loop. if the test expression is true, inside the statements are executed  
+If the test expression is false, the flow of control skips the execution and jumps out of the outer loop.
+
+<h3>Example of nested while loop</h3>
+
+<div class="box">
+    let i=1;
+    
+    while(i&lt;=3){
+        console.log(`${i}:inner loop is executed only once\n`);
+
+        let j=1;
+        while(j&lt;=4){
+            console.log(`${j} :Outer loop is executed until to completion\n`);
+            j++;
+        }
+        i++;
+    }
+</div>
+    <h3>print 1 to 10, 10 times in to rows</h3>
+    <div class="box">
+    let i=1,j, output='';
+    while(i&lt;=10){
+          j=1;
+          while(j&lt;=10){
+              output+=j;
+              j++;
+          }
+ 
+          i++;
+          console.log(output+'\n');
+          output='';
+    }
+   </div>
+
+   output: 
+
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+   12345678910
+
+   <h3>Rectangular star pattern printing using nested while loop</h3>
+   <div class="box">
+    let i=1,j, output='';
+    while(i&lt;=10){
+        j=1;
+        while(j&lt;=10){
+           output+='*'
+           j++;
+        }
+        console.log(output+'\n')
+        i++;
+        output='';
+    }
+    
+   </div>
+   
+   When the above code is compiled and executed, it produces the following result:
+   
+   output:
+
+   **********
+   **********
+   **********
+   **********
+   **********
+   **********
+   **********
+   **********
+   **********
+   **********
+   
+ <h3>Multiplication table</h3>
+
+ <div class="box">
+   let i=1,j, output='';
+   while(i&lt;=10){
+           j=1;
+         while(j&lt;=10){
+              
+              output+=j*i+'\t'
+              j++;
+          }
+           
+        i++;
+        console.log(output+'\n');
+        output=''
+       }
+
+ </div>
+   
+output:
+
+1    2     3     4     5      6      7    8     9     10
+2    4     6     8    10     12     14    16    18    20
+3    6     9    12    15     18     21    24    27    30
+4    8     12   16    20     24     28    32    36    40
+5    10    15   20    25     30     35    40    45    50
+6    12    18   24    30     36     42    48    54    60
+7    14    21   28    35     42     49    56    63    70
+8    16    24   32    40     48     56    64    72    80
+9    18    27   36    45     54     63    72    81    90
+10   20    30   40    50     60     70    80    90    100
+
+
 
    </pre>
 </body>

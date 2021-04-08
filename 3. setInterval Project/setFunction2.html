@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+margin-top:100px;
+font-family:Verdana;
+text-align:center;
+background-color:#172727;
+color:white;
+}
+
+#demo{
+outline:none;
+font-size:20px;
+border:none;
+background-color:purple;
+color:white;
+padding: 15px;
+width:215px;
+}
+h4{
+font-weight:300;
+font-size:20px;
+}
+
+.btn{
+outline:none;
+font-size:18px;
+border:none;
+color:white;
+padding: 8px 14px;
+}
+.btn1{
+background-color:orange;
+}
+.btn2{
+background-color:green;
+}
+div{
+margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Javascript Clock with start and stop button</h2><br>
+<button id="demo"></button>
+
+<div>
+
+<button class='btn btn1' id='stop-btn' onclick="myStopFunction()">Stop time</button>
+<button class='btn btn2'  onclick="myStartFunction()">Start time</button>
+
+</div>
+<h4>Task: Fix the start button</h4>
+<script>
+
+let myVar;
+function startTimer(){
+   myVar=setInterval(myTimer, 1000);
+} 
+startTimer()
+
+function myTimer() {
+  let d = new Date();
+  let t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+
+
+function myStopFunction() { 
+  clearInterval(myVar);
+  document.getElementById('stop-btn').style.backgroundColor='red'
+}
+function myStartFunction(){
+  clearInterval(myVar)
+  document.getElementById('stop-btn').style.backgroundColor='orange'
+  startTimer()
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

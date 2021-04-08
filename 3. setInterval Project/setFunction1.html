@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+<style>
+body{
+margin-top:100px;
+font-family:Verdana;
+text-align:center;
+background-color:#172727;
+color:white;
+}
+
+#demo{
+outline:none;
+font-size:18px;
+border:none;
+background-color:purple;
+color:white;
+padding: 10px 16px;
+}
+h4{
+font-weight:300;
+font-size:20px;
+}
+</style>
+</head>
+<html>
+<body>
+
+
+<h2>Javascript Dynamic Clock</h2>
+
+<button id="demo"></button>
+
+<h4>Learn more about Differences between  innerHTML vs innerText vs innerContent</h4>
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  let d = new Date();
+  let t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+
+</script>
+
+</body>
+</html>
+

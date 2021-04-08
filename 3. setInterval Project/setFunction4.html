@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+body{
+font-family:Verdana;
+margin:50px 100px;
+}
+
+button{
+outline:none;
+border:none;
+background-color:#133337;
+font-size:18px;
+color:white;
+padding:10px 20px;
+border-radius:4px;
+}
+.btn-stop{
+background-color:red;
+}
+</style>
+<body>
+
+<p>In this example, the setInterval() method executes the setColor() function once every 300 milliseconds, <br><br>which will toggle between two background colors.</p><br>
+
+<button onclick="stopColor()" class='btn-stop'>Stop Toggling</button>
+<button onclick="startColor()" >Start Toggling</button>
+
+<script>
+var myVar = setInterval(setColor, 300);
+ 
+function setColor() {
+  var x = document.body;
+  x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+}
+ 
+function stopColor() {
+  clearInterval(myVar);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
