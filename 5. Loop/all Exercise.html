@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre style="font-size: 18px;">
+    <h2>Loop Problem Solving</h2>
+    <h2>Patterns Making</h2>
+    <h2>Math Series</h2>
+    
+    
+    
+    <h3>Sum of some numbers inputed by user</h3>
+    int main()
+    {
+        let n, i=1, num, sum=0, avg=0;
+        n=parseInt(prompt('Enter how many numbers to be inputed'))
+
+        while(i&lt;=n){
+            num=Number(prompt('Enter a number'))
+            sum+=num;
+            i++;
+        }
+        avg=sum/n;
+        cosole.log(avg);
+
+    
+    <h3>write a program to calculate average of 10 numbers using do...while</h3>
+    
+        let i=1, num, sum=0, avg=0;
+        do{
+            sum=sum+i;
+            i++;
+        }while(i&lt;=10);
+        console.log(sum)
+    
+    <h3>Write a program to calculate square and cube of n integers</h3>
+       
+        let i,n;
+        n=parseInt(prompt('Enter a number'))
+        i=1;
+        do{
+            console.log(`${i} pow(${i}, 2) = ${Math.pow(i,2)} and ${i} pow(${i}, 3) ${Math.pow(i,3)}`);
+            i++;
+        }while(i&lt;=n);
+    
+    
+    <h3>write a program to list all the leap years from 1900 to 2100</h3>
+        let m=1900,n=2005;
+        do{
+            if(m%4==0){
+                console.log(`${m} is leap year`)
+            }
+            else{
+                console.log(`${m} is not leap year`)
+            }
+            m++;
+        }while(m&lt;=n);
+    }
+    
+    <h3>Write a program to count lower upper and numbers</h3>
+        let lower=0,upper=0,number=0, ch;
+        do{
+            ch=prompt('Enter character');
+            if(ch>='A' && ch&lt;='Z'){
+                upper++;
+            }
+            if(ch>='a' && ch&lt;='z'){
+                lower++;
+            }
+            if(ch>='0' && ch&lt;='9'){
+                number++;
+            }
+      
+        }while(ch!='*');
+        console.log(`lower: ${lower}, upper: ${upper}, number ${number}`)
+  
+    <h3>sum and mean of all positives negatives</h3>
+    
+        let pos=0, neg=0, sum_pos=0, sum_neg=0, num, mean_pos=0, mean_neg=0;
+        num=parseInt(prompt('Enter a number'))
+        do{
+            if(num>0){
+                sum_pos+=num;
+                pos++;
+            }
+            if(num&lt;0){
+                sum_neg+=num;
+                neg++;
+            }
+            num=parseInt(prompt('Enter a number'))
+        }while(num!=-1);
+        
+        mean_pos=sum_pos/pos;
+        mean_neg=sum_neg/neg;
+        consle.log("Mean of positives: ",mean_pos);
+        console.log("Mean of negative : ",mean_neg);
+    
+    
+        <h3>Odd and Even numbers from m range to n</h3>
+        let m,n;
+        m=parseInt(prompt('Enter starting point'));
+        n=parseInt(prompt('Enter ending point'));
+
+        for(int i=m;i&lt;=n;i++){
+            if(i%2==0){
+                console.log("Even",i);
+            }
+            else{
+                console.log("Odd",i);
+            }
+        }
+
+   
+    <h3>Facatorial of a numbaer</h3>
+
+        let fac=1,i,n;
+        n=parseInt(prompt('Factorial of: '))
+        if(n==0){
+            fac=1;
+        }
+        else{
+            for(i=1;i&lt;=n;i++){
+                fac*=i;
+            }
+        }
+        console.log(`factorial of ${i} is ${fac}`);
+
+    
+    <h3>If a number is prime number or not</h3>
+  
+        let i,n,count=0;
+        n=parseInt(prompt('Enter a number'))
+        for(i=2; i&lt;n/2; i++){
+            if(n%i==0){
+                count++;
+                break;
+            }
+        }
+        if(count==0){
+            console.log('Prime number')
+        }
+        else{
+            console.log('Not a prime number')
+        }
+    
+    
+    <h3>Count primes and non primes numbers</h3>
+
+        let i, n, count=0, primes=0, non_primes=0;
+        n=parseInt(prompt('Enter a number\nEnter -1 to exit'));
+
+        do{
+            for(i=2; i&lt; n/2; i++){
+                if(n%2==0){
+                    count=1;
+                    break;
+                }
+            }
+            if(count==0){
+                primes++;
+            }
+            else{
+                non_primes++;
+            }
+            count=0;
+            n=parseInt(prompt('Enter a number'));      
+        }while(n!=-1);
+
+        console.log("Number of primes",primes);
+        console.log("Number of nonPrimes: ",non_primes);   
+    
+        <h3>power of n</h3>
+
+        let i, num, n, result=1;
+        printf("Enter a number: ");
+        scanf("%d",&num);
+        printf("Till which power to calculate: ");
+        scanf("%d",&n);
+        for(i=1;i&lt;=n;i++){
+            result=result*num;
+        }
+        printf("\nPow of(%d,%d) is %d",num,n,result);
+        console.log(`power of (${num}, ${n}) is: ${result}`);
+    }
+    
+    <h3>reverse a number</h3>
+   
+        let num, rev;
+        num=parseInt(prompt('Enter a number'))
+        while(num!=0){
+            rev=num%10;
+            console.log('reversing process: ',rev)
+            num=(num/10).toFixed(0);
+        }
+    
+    
+       
+      let n, reverse=0, rem;    
+      n=parseInt(prompt('Enter a number'))
+      while(n!=0)    
+      {    
+         rem=n%10;    
+         reverse=reverse*10+rem;    
+         n/=10;    
+      }    
+      console.log('reversed number is: ',reverse); 
+   
+    
+    
+      let n, r = 0;
+    
+      num=parseInt(prompt('Enter a number'))
+    
+      while (n != 0)
+      {
+        r = r * 10;
+        r = r + n%10;
+        n = n/10;
+      }
+    
+      console.log('reversed number is: ',reverse); 
+    
+    
+    
+    <h3>sum of digits</h3>
+    
+    
+        let n, sum=0, rem;    
+        num=parseInt(prompt('Enter a number')); 
+        while(n!=0)    
+        {    
+           rem=n%10;    
+           sum=sum+rem;    
+           n/=10;    
+        }    
+        console.log('sum is: ', sum);
+    
+    52 decimal to binary
+    #include<stdio.h>
+    #include<math.h>
+    int main()
+    {
+        int num,rem,binary=0,i=0;
+        printf("Enter number: ");
+        scanf("%d",&num);
+        while(num!=0){
+            rem=num%2;
+            binary=binary+rem*(pow(10,i));
+            num=num/2;
+            i++;
+        }
+        printf("Binary is: %d",binary);
+    }
+    
+    #include<stdio.h>
+    #include<math.h>
+    int main()
+    {
+        int n;
+        int bin = 0;
+        int rem, i = 1, step = 1;
+        printf("Enter number: ");
+        scanf("%d",&n);
+        while (n != 0) {
+            rem = n % 2;
+            printf("Step %d: %d/2, Remainder = %d, Quotient = %d\n", step++, n, rem, n / 2);
+            n /= 2;
+            bin += rem * i;
+            i *= 10;
+        }
+        printf("Binary is: %d",bin);
+    }
+    
+    
+    53 Octal to decimal
+    #include<stdio.h>
+    int main()
+    {
+        int num,oct=0,i=1,rem;
+        printf("Enter number: ");
+        scanf("%d",&num);
+        while(num!=0){
+            rem=num%8;
+            oct=oct+rem*i;
+            num/=8;
+            i*=10;
+        }
+        printf("Octal value is: %d\n",oct);
+    }
+    
+    
+    54 decimal to hexadecimal
+    
+    #include <stdio.h>
+    int main()
+    {
+        int number,cnt,i;
+        char    hex[32];    /*bcoz it contains characters A to F*/
+     
+        printf("Enter decimal number: ");
+        scanf("%d",&number);
+     
+         
+        cnt=0;              /*initialize index to zero*/
+        while(number>0)
+        {
+            switch(number%16)
+            {
+                case 10:
+                    hex[cnt]='A'; break;
+                case 11:
+                    hex[cnt]='B'; break;
+                case 12:
+                    hex[cnt]='C'; break;
+                case 13:
+                    hex[cnt]='D'; break;
+                case 14:
+                    hex[cnt]='E'; break;
+                case 15:
+                    hex[cnt]='F'; break;
+                default:
+                    hex[cnt]=(number%16)+0x30;  /*converted into char value*/
+            }
+            number=number/16;
+            cnt++;
+        }
+     
+        /*print value in reverse order*/
+        printf("Hexadecimal value is: ");
+        for(i=(cnt-1); i>=0;i--)
+            printf("%c",hex[i]);
+     
+        return 0;
+    }
+    
+    55 Binary to decimal
+    #include<stdio.h>
+    int main()
+    {
+        int deci_num=0,rem,binary,i=1;
+        printf("Enter binary number: ");
+        scanf("%d",&binary);
+        while(binary!=0){
+            rem=binary%10;
+            deci_num=deci_num+rem*i;
+            binary=binary/10;
+            i*=2;
+        }
+        printf("%d in decimal is: %d\n",binary,deci_num);
+       
+    }
+    
+    
+    56 Octal to decimal
+    #include<stdio.h>
+    #include<math.h>
+    int main()
+    {
+        int octal,decimal=0,i=0,rem;
+        printf("Enter octal number: ");
+        scanf("%o",&octal);
+        while(octal!=0){
+            rem=octal%10;
+            decimal=decimal+rem*pow(8,i);
+            octal/=10;
+            i++;
+            //i*=8;
+        }
+        printf("%o in decimal is: %d\n",octal,decimal);
+    }
+    
+    #include <stdio.h>
+    #include <math.h>
+    /* This function converts the octal number "octalnum" to the
+     * decimal number and returns it.
+     */
+    long octalToDecimal(int octalnum)
+    {
+        int decimalnum = 0, temp = 0;
+    
+        while(octalnum != 0)
+        {
+            decimalnum = decimalnum + (octalnum%10) * pow(8,temp);
+            temp++;
+            octalnum = octalnum / 10;
+        }
+    
+        return decimalnum;
+    }
+    int main()
+    {
+        int octalnum;
+    
+        printf("Enter an octal number: ");
+        scanf("%d", &octalnum);
+    
+        printf("Equivalent decimal number is: %ld", octalToDecimal(octalnum));
+    
+        return 0;
+    }
+    
+    
+    59 1+ 1/2 + 1/3+.....1/n
+    #include<stdio.h>
+    int main()
+    {
+        int n,i;
+        float a,sum=0;
+        printf("Till how: ");
+        scanf("%d",&n);
+        for(i=1;i<=n;i++){
+            a=(float)1/i;
+            sum=sum+a;
+            printf("1/%d is %.2f\n",i,a);
+        }
+        printf("Sum of series is: %.2f\n",sum);
+    }
+    
+    60 pow series
+    #include<stdio.h>
+    #include<math.h>
+    int main()
+    {
+        int n,i;
+        float a,sum=0;
+        printf("Till how: ");
+        scanf("%d",&n);
+        for(i=1;i<=n;i++){
+            a=(float)1/pow(i,2);
+            sum=sum+a;
+        }
+        printf("Sum of series is: %.2f\n",sum);
+    }
+    
+    
+    
+    
+    
+</pre>
+</body>
+</html>

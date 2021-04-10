@@ -1,0 +1,54 @@
+let i=1024;
+for(; i; i>>=1){
+    console.log('hello world ',i);
+}
+
+i>>=1 means i= i>>1
+i=1024= 100 0000 0000
+i>>1= 010 0000 0000 = 512
+
+
+
+
+let i=0;
+for(console.log('one'); i<3 && console.log('Hello');i++){
+    console.log('Hi');
+}
+
+one
+Hello
+
+let i=0;
+for(console.log('one'); i<3 && console.log(true);i++){
+    console.log('Hi');
+}
+
+one
+true
+
+
+let i=0;
+while(i++<5);
+{
+    console.log(i);
+}
+
+
+
+let x=3;
+if(x==2); x=0;
+if(x==3) x++;
+else x+=2;
+console.log('x is: ',x);
+
+
+
+
+
+
+
+
+
+
+
+

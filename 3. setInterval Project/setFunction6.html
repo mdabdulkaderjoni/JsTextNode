@@ -29,9 +29,9 @@
 
 </head>
 
-<!-- <body onload="changeColor();"> -->
+<body onload="changeColor();">
 
-<body>
+
 
   <button onclick="stopTextColor();" class='btn-stop'>Stop</button>
   <button onclick="startTextColor();">Start</button>
@@ -47,7 +47,7 @@
     function changeColor() {
       nIntervId = setInterval(flashText, 1000);
     }
-    changeColor()
+    //changeColor() no need to call because we have set this to be called onload in body tag
 
     function flashText() {
 
@@ -73,16 +73,6 @@
         "Gold",
         "GoldenRod"]
 
-      //   while(true){
-      //       document.body.style.backgroundColor=colors[i]
-      //       i++; //i=3;
-
-      //       if(i==colors.length){
-      //          i=0;
-      //       }
-      //   break;
-
-      // }
       document.body.style.backgroundColor = colors[i]
       i++;
       if (i == colors.length) {
