@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        
+    </style>
 </head>
 <body>
 <pre style="font-size: 18px;">
@@ -177,16 +180,16 @@
         <h3>power of n</h3>
 
         let i, num, n, result=1;
-        printf("Enter a number: ");
-        scanf("%d",&num);
-        printf("Till which power to calculate: ");
-        scanf("%d",&n);
+        num=parseInt(prompt('Enter a number'));  
+    
+        n=parseInt(prompt('Till which power to calculate:'));  
+
         for(i=1;i&lt;=n;i++){
             result=result*num;
         }
-        printf("\nPow of(%d,%d) is %d",num,n,result);
+
         console.log(`power of (${num}, ${n}) is: ${result}`);
-    }
+
     
     <h3>reverse a number</h3>
    
@@ -240,73 +243,61 @@
         }    
         console.log('sum is: ', sum);
     
-    52 decimal to binary
-    #include<stdio.h>
-    #include<math.h>
-    int main()
-    {
-        int num,rem,binary=0,i=0;
-        printf("Enter number: ");
-        scanf("%d",&num);
+    <h3>decimal to binary</h3>
+    
+        let num,rem,binary=0,i=0;
+        num=parseInt(prompt('Enter a number'))
+     
         while(num!=0){
             rem=num%2;
             binary=binary+rem*(pow(10,i));
             num=num/2;
             i++;
         }
-        printf("Binary is: %d",binary);
-    }
-    
-    #include<stdio.h>
-    #include<math.h>
-    int main()
-    {
-        int n;
-        int bin = 0;
-        int rem, i = 1, step = 1;
-        printf("Enter number: ");
-        scanf("%d",&n);
+        console.log(binary)
+
+        <h4>another version</h4>
+
+        let n;
+        let bin = 0;
+        let rem, i = 1, step = 1;
+        n=parseInt(prompt('Enter a number'))
+      
         while (n != 0) {
             rem = n % 2;
-            printf("Step %d: %d/2, Remainder = %d, Quotient = %d\n", step++, n, rem, n / 2);
+            console.log(`Step ${step++} : ${n}/2, Remainder = ${rem}, Quotient = ${n/2}`);
             n /= 2;
             bin += rem * i;
             i *= 10;
         }
-        printf("Binary is: %d",bin);
-    }
+        console.log(bin)
+
     
     
-    53 Octal to decimal
-    #include<stdio.h>
-    int main()
-    {
-        int num,oct=0,i=1,rem;
-        printf("Enter number: ");
-        scanf("%d",&num);
+    <h3>Octal to decimal</h3>
+    
+        let num,oct=0,i=1,rem;
+        num=parseInt(prompt('Enter a number'))
+
         while(num!=0){
             rem=num%8;
             oct=oct+rem*i;
             num/=8;
             i*=10;
         }
-        printf("Octal value is: %d\n",oct);
-    }
+        console.log(oct);
     
+   <h3>decimal to hexadecimal</h3>
     
-    54 decimal to hexadecimal
-    
-    #include <stdio.h>
-    int main()
-    {
-        int number,cnt,i;
-        char    hex[32];    /*bcoz it contains characters A to F*/
+   
+        let number,cnt,i;
+        let  hex=[];    
      
-        printf("Enter decimal number: ");
-        scanf("%d",&number);
+        number=parseInt(prompt('Enter a number'))
      
          
-        cnt=0;              /*initialize index to zero*/
+        cnt=0;              //initialize index to zero
+
         while(number>0)
         {
             switch(number%16)
@@ -330,40 +321,61 @@
             cnt++;
         }
      
-        /*print value in reverse order*/
-        printf("Hexadecimal value is: ");
-        for(i=(cnt-1); i>=0;i--)
-            printf("%c",hex[i]);
-     
-        return 0;
-    }
+        //print value in reverse order
+
+        console.log("Hexadecimal value is: ");
+
+        for(i=(cnt-1); i>=0;i--){
+            console.log(hex[i]);
+        }
+
+
+      <h4>another version</h4>
+      
+      let num, temp, rem, i=1, j;
+      let hexa =[];
+      num=parseInt(prompt('Enter any number'))
+      temp=num;
+
+      while(temp!=0){
+          rem=temp%16;
+ 	  if(rem&lt;10){
+		rem=rem+48;
+	  }
+	  else{
+		rem=rem+55;
+	  }
+          hexa[i++]=rem;
+	  temp=temp/16;
+      }
+
+      console.log('hexadecimal number is: ')
+      for(j=i-1;j>0;j--){
+	  console.log(hexa[j]);
+      }
+
     
-    55 Binary to decimal
-    #include<stdio.h>
-    int main()
-    {
-        int deci_num=0,rem,binary,i=1;
-        printf("Enter binary number: ");
-        scanf("%d",&binary);
+    <h3>Binary to decimal</h3>
+
+        let deci_num=0,rem,binary,i=1;
+
+        binary=parseInt(prompt('Enter a number'))
         while(binary!=0){
             rem=binary%10;
             deci_num=deci_num+rem*i;
             binary=binary/10;
             i*=2;
         }
-        printf("%d in decimal is: %d\n",binary,deci_num);
+       console.log(decimal_num);
        
-    }
+
     
     
-    56 Octal to decimal
-    #include<stdio.h>
-    #include<math.h>
-    int main()
-    {
-        int octal,decimal=0,i=0,rem;
-        printf("Enter octal number: ");
-        scanf("%o",&octal);
+    <h3> Octal to decimal</h3>
+    
+        let octal,decimal=0,i=0,rem;
+        octal=parseInt(prompt('Enter a number'))
+
         while(octal!=0){
             rem=octal%10;
             decimal=decimal+rem*pow(8,i);
@@ -371,71 +383,86 @@
             i++;
             //i*=8;
         }
-        printf("%o in decimal is: %d\n",octal,decimal);
-    }
+        console.log("octal in decimal is: ",octal,decimal);
+
     
-    #include <stdio.h>
-    #include <math.h>
+   
     /* This function converts the octal number "octalnum" to the
      * decimal number and returns it.
      */
-    long octalToDecimal(int octalnum)
-    {
-        int decimalnum = 0, temp = 0;
+        let octalnum;
     
-        while(octalnum != 0)
+        octalnum=parseInt(prompt('Enter a number'));
+    
+        
+
+        function octalToDecimal(octalnum)
         {
-            decimalnum = decimalnum + (octalnum%10) * pow(8,temp);
-            temp++;
-            octalnum = octalnum / 10;
-        }
+            let decimalnum = 0, temp = 0;
+    
+            while(octalnum != 0)
+            {
+                decimalnum = decimalnum + (octalnum%10) * Math.pow(8,temp);
+                temp++;
+                octalnum = octalnum / 10;
+            }
     
         return decimalnum;
-    }
-    int main()
-    {
-        int octalnum;
+       }
+       let result=octalToDecimal(octalnum);
+       console.log(result);
     
-        printf("Enter an octal number: ");
-        scanf("%d", &octalnum);
+
+       <h2>Pattern Making Star</h2>
+
+       <img src="./Images/star1.JPG" alt="">
+       <img src="./Images/star2.JPG" alt="">
+       <img src="./Images/star3.JPG" alt="">
+       <img src="./Images/star4.JPG" alt="">
+       <img src="./Images/star5.JPG" alt="">
+       <img src="./Images/star6.JPG" alt="">
+       <img src="./Images/star7.JPG" alt="">
+       <img src="./Images/star8.JPG" alt="">
+       <img src="./Images/star9.JPG" alt="">
+       <img src="./Images/star10.JPG" alt=""> 
+
+       <h2>Pattern Making Number</h2>
+
+       <img src="./Images/number1.JPG" alt="">
+
+       <h2>Pattern Making Alphabet</h2>
+       <img src="./Images/character1.JPG" alt="">
+
+       <h2>Sum of Series</h2>
+       <img src="./Images/series1.JPG" alt="">
+       
+        
+
     
-        printf("Equivalent decimal number is: %ld", octalToDecimal(octalnum));
     
-        return 0;
-    }
+        <h3> 1+ 1/2 + 1/3+.....1/n</h3>
     
-    
-    59 1+ 1/2 + 1/3+.....1/n
-    #include<stdio.h>
-    int main()
-    {
-        int n,i;
-        float a,sum=0;
-        printf("Till how: ");
-        scanf("%d",&n);
-        for(i=1;i<=n;i++){
-            a=(float)1/i;
+        let n,i;
+        let a,sum=0;
+        n=parseInt(prompt('Till how');
+        for(i=1;i&lt;=n;i++){
+            a=1/i;
             sum=sum+a;
-            printf("1/%d is %.2f\n",i,a);
+            
         }
-        printf("Sum of series is: %.2f\n",sum);
-    }
-    
-    60 pow series
-    #include<stdio.h>
-    #include<math.h>
-    int main()
-    {
-        int n,i;
-        float a,sum=0;
-        printf("Till how: ");
-        scanf("%d",&n);
-        for(i=1;i<=n;i++){
-            a=(float)1/pow(i,2);
+        console.log(sum);
+
+        <h3>pow series</h3>
+   
+        let n,i;
+        let a,sum=0;
+        n=parseInt(prompt('Till how');
+        for(i=1;i&lt;=n;i++){
+            a=1/Math.pow(i,2);
             sum=sum+a;
         }
-        printf("Sum of series is: %.2f\n",sum);
-    }
+        console.log(sum)
+    
     
     
     
