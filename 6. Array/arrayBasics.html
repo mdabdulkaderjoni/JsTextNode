@@ -60,11 +60,125 @@ let myArray = [1, 2, 3, 'Hello World', true, {name: 'Jhon', age: 12}]
 <h2>Operations That Can Be Performed On Arrays</h2>
 
     <h3>1. Traversal</h3>
+Traversing the array element means accessing each and every element of the array for a specific purpose.
+Array is a linear data structure because all its elements forms a sequence, traversing its elements is very simple and 
+straightforward.
+
+<b>Algorithom for array traversal</b>
+
+Step 1: [Initialization] Set I=lower_bound
+Step 2: Repeat steps 3 to 4 while I<=upper_bound
+Step 3: Apply process to A[I]
+Step 4: Set I=I+1
+	[End of Loop]
+Step 5: Exit
+
+<h3>Write a program to read and display n numbers using array</h>
+
+let arr=[];
+let i,num;
+
+for(i=0;i<10;i++){
+  num=parseInt(prompt(`Enter arr[${i}] = `));
+  arr[i]=num;
+}
+
+for(i=0;i<10;i++){
+  console.log(arr[i]);
+}
+
+<b>Try Your self</b> Read and display n random numbers using an array
+
+<h3>Write a program  to read n number of values in an array and display it in reverse order</h3>
+
+<h3>Write a program to copy the elements of one array into another array</h3>
+
+<h3>Write a program to find sum and average of an array of n numbers</h3>
+
+<h3>Write a program to find the smallest and largest number of an array</h3>
+
+<h3>Write a program to find the second largest element in an array</h3>
+
+<h3>Write a program to find the position of smallest and largest number of an array</h3>
+
+<h3>Write a program to exchange smallest and largest number of an array</h3>
+
+<h3>Write a program to find whether the array of integers contain a duplicate number</h3>
+
+<h3>Write a program to count a total number of duplicate elements in an array</h3>
+
+<h3>Write a program  to print all unique elements in an array</h3>
+
+<h3>Write a program to read marks of 10 students in the range of 0-100. Then make groups: 0-10, 10-20, 20-30 etc.
+    Count the number of values that falls in each group and display the result.</h3>
+
+Demo: arr=[33, 55, 88] 
+
+group 0-10: 0
+group 10-20: 0
+group 20-30: 1
+
+<h3> Write a program to count the frequency of each element of an array</h3>
+
+<h3>Write a program to separate odd and even integers in separate arrays</h3>
+
+<h3>Write a program to find the majority element of an array</h3>
+
+<mark>A majority element in an array A[] of size n is an element that appears more than n/2 times 
+(and hence there is at most one such element)</mark>
+
+<h3>Write a program  to find the number occurring odd number of times in an array</h3>
+
+<h3>Write a program to find the missing number from a given array. There are no duplicates in list</h3>
+
+<h3>Write a program to find the two repeating elements in a given array.
+
+The given array is : 1 3 4 2 5 6 9 8
+The missing number is : 7
+
+
     <h3>2. Insertion</h3>
-    <h3>3. Search</h3>
-    <h3>4. Deletion</h3>
-    <h3>5. Merging</h3>
-    <h3>6. Sorting</h3>
+
+<b>Algorithom to insert a value in the array in a given position</b>
+
+Step 1: [Initialization] Set I=N
+Step 2: Repeat steps 3 and 4 while I>=Pos
+Step 3: Set A[I+1]=A[I]
+Step 4: Set I = I-1
+        [End of Loop]
+Step 5: Set N=N+1
+Step 6: Set A[Pos]=Value
+Step 7: Exit
+
+<h3>Write a program to insert a number at a given location in the array</h3>
+
+    <h3>3. Deletion</h3>
+
+<b>Algorithom to delete a value in the array in a given position</b>
+
+Step 1: [Initialization] Set I=Pos
+Step 2: Repeat steps 3 and 4 while I<=N-1
+Step 3: Set A[I]=A[I+1]
+Step 4: Set I = I-1
+        [End of Loop]
+Step 5: Set N=N-1
+Step 6: Exit
+
+    <h3>4. Merging</h3>
+
+<h3>Write a program to merge two unsorted array</h3>
+
+<h3>Write a program to merge two array in a sorted array</h3>
+
+
+
+    <h3>5. Search</h3>    
+
+<b>Linear Search</b>
+<b>Binary Search</b>
+
+    
+    
 
 <h3>Multidimensional arrays (array of an array)</h3>
 

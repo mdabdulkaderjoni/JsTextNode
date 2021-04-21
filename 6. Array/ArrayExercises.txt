@@ -1,0 +1,57 @@
+              Traversal
+
+Read and display n numbers using an array
+
+let arr=[];
+
+for(let i=0;i<5;i++){
+  arr[i]=parseInt(prompt('Enter a number'))
+}
+
+for(let i=0;i<5;i++){
+  console.log(`arr[${i}]: `,arr[i])
+}
+
+Read and display n random numbers using an array
+
+let min=50, max=100;
+let arr=[];
+
+for(let i=0;i<10;i++){
+  let random=Math.floor((Math.random() * (max - min + 1)) + min)
+  arr[i]=random;
+}
+console.log(arr);
+
+for(let i=0;i<10;i++){
+  console.log(arr[i])
+}
+
+
+
+Find mean of n numbers using arrays
+
+
+Find the largest and smallest number using arrays
+
+Find the position of largest and smallest number of an array
+
+Interchange the largest and the smallest number in an array
+
+Find the second largest number in an array
+
+Enter n number of digits and form a number using array
+
+Find whether the array of integers contain a duplicate number
+
+Find the frequency of students marks
+
+Display frequency histograms of each group
+
+Read floating points number, sort them and find the median of the values
+
+
+
+
+
+
